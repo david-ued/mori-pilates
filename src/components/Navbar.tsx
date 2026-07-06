@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { locales, localePath, localeLabel, defaultLocale, type Locale } from '@/lib/i18n';
 import type { Dict } from '@/dictionaries';
@@ -205,7 +205,7 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
                 }}
                 className="pt-5"
               >
-                <LangSwitcher locale={locale} basePath={basePath} />
+                <LangLinks locale={locale} basePath={basePath} />
               </motion.li>
             </motion.ul>
           </motion.div>
@@ -215,21 +215,77 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
   );
 }
 
-/** Small language dropdown; navigates to the same page under the chosen locale. */
+/** Small custom language dropdown; links to the same page under each locale. */
 function LangSwitcher({ locale, basePath }: { locale: Locale; basePath: string }) {
-  const router = useRouter();
+  const [open, setOpen] = useState(false);
   return (
-    <select
-      aria-label="Language"
-      value={locale}
-      onChange={(e) => router.push(localePath(e.target.value as Locale, basePath))}
-      className="cursor-pointer border border-ink/15 bg-transparent px-1.5 py-1 text-xs text-ink-soft transition-colors hover:border-mori/50 focus:border-mori focus:outline-none"
-    >
+    <div className="relative">
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="Language"
+        onClick={() => setOpen(!open)}
+        className="flex cursor-pointer items-center gap-1.5 border border-ink/15 px-2.5 py-1.5 text-xs text-ink-soft transition-colors duration-300 hover:border-mori/50 hover:text-mori-deep"
+      >
+        {localeLabel[locale]}
+        <svg
+          viewBox="0 0 10 6"
+          className={`h-1.5 w-2.5 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          aria-hidden
+        >
+          <path d="m1 1 4 4 4-4" />
+        </svg>
+      </button>
+      {open && (
+        <>
+          {/* click-away backdrop */}
+          <div className="fixed inset-0 z-10" aria-hidden onClick={() => setOpen(false)} />
+          <ul className="absolute right-0 top-full z-20 mt-1 min-w-full border border-ink/15 bg-cream shadow-[0_12px_28px_-14px_rgba(36,33,33,0.35)]">
+            {locales.map((l) => (
+              <li key={l}>
+                <Link
+                  href={localePath(l, basePath)}
+                  hrefLang={l}
+                  onClick={() => setOpen(false)}
+                  className={`block whitespace-nowrap px-3.5 py-2 text-xs transition-colors duration-300 ${
+                    l === locale
+                      ? 'bg-mori-mist/60 text-mori-deep'
+                      : 'text-ink-soft hover:bg-mori-mist/40 hover:text-mori-deep'
+                  }`}
+                >
+                  {localeLabel[l]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
+  );
+}
+
+/** Mobile: all languages laid out inline — no dropdown. */
+function LangLinks({ locale, basePath }: { locale: Locale; basePath: string }) {
+  return (
+    <div className="flex items-center gap-5 text-sm tracking-wide">
       {locales.map((l) => (
-        <option key={l} value={l}>
+        <Link
+          key={l}
+          href={localePath(l, basePath)}
+          hrefLang={l}
+          className={
+            l === locale
+              ? 'text-mori-deep underline decoration-mori/50 underline-offset-4'
+              : 'text-ink-soft transition-colors hover:text-mori-deep'
+          }
+        >
           {localeLabel[l]}
-        </option>
+        </Link>
       ))}
-    </select>
+    </div>
   );
 }

@@ -73,26 +73,6 @@ const dict: Dict = {
     proofTitle: 'Change you can see — and feel',
     proofBody:
       'From improved posture and released shoulders to seniors squatting and walking with confidence again — we care about functional recovery: returning the body to a state where life feels good to live.',
-    testimonials: [
-      {
-        quote:
-          'After three months, the lower-back pain I’d had for years clearly improved. I can now walk in the park with my grandson for a full hour.',
-        name: 'Ms. Chen',
-        detail: '68 · Private sessions',
-      },
-      {
-        quote:
-          'My teacher releases my neck and shoulders with Seitai first, then we move to the apparatus. I leave feeling a size lighter every time.',
-        name: 'Kelly',
-        detail: 'Office worker · Seitai × Pilates',
-      },
-      {
-        quote:
-          'For the first time, exercise doesn’t feel like pressure. In a small class the teacher actually sees you — mistakes get caught right away.',
-        name: 'Mr. Lin',
-        detail: '52 · Trio classes',
-      },
-    ],
     beforeAfterNote: 'Client before/after records are being prepared and will be added soon.',
     finalCtaTitle: 'Give your body a moment of stillness',
     finalCtaBody:
@@ -179,8 +159,6 @@ const dict: Dict = {
       'All sessions are by appointment. Not sure which class suits you? Message us on LINE about how your body feels — we’ll give you honest advice.',
     bookCta: 'Book via LINE',
     trialCta: 'Book a trial via LINE',
-    priceTableTitle: 'Pricing',
-    planLabel: 'Class',
     pilates: {
       title: 'Pilates',
       subtitle: 'Fully equipped machine sessions · 60 min',

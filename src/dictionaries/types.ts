@@ -58,7 +58,6 @@ export interface Dict {
     proofKicker: string;
     proofTitle: string;
     proofBody: string;
-    testimonials: { quote: string; name: string; detail: string }[];
     beforeAfterNote: string;
     finalCtaTitle: string;
     finalCtaBody: string;
@@ -95,8 +94,6 @@ export interface Dict {
     intro: string;
     bookCta: string;
     trialCta: string;
-    priceTableTitle: string;
-    planLabel: string;
     pilates: {
       title: string;
       subtitle: string;

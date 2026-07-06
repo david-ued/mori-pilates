@@ -58,7 +58,7 @@
 ## 待確認事項
 - [ ] 正式網域:上線前修改 `src/lib/site.ts` 的 `SITE_URL`(現為 `https://moripilates.com`)
 - [ ] 英/日文文案是否需母語者潤稿(目前為初稿)
-- [ ] 見證(testimonials)目前為示意文案,需換成真實學員回饋
+- [x] 見證(testimonials)已自首頁移除(原為示意文案);日後若要放真實學員回饋可再加回
 - [x] 交通指引:已依 IG 官方資訊確認為「東門站 3 號出口・步行約 2 分鐘」(字典與自製地圖已同步)
 - [ ] PRD 指定 Nextra:因需與全站 `[locale]` 靜態輸出路由、品牌視覺完全整合,Journal 改以「MDX 檔案 + next-mdx-remote」實作(內容管理方式相同:資料夾放 .mdx 即發佈)。若仍堅持 Nextra 可再遷移。
 
@@ -70,3 +70,4 @@
 - 2026-07-07:師資頁依 IG 官方貼文改為真實四位老師(Tidus/Ivy/Claire/Aaron):三語簡介、專長 tags、完整證照清單(STOTT/Polestar/ACE/Cube/Oov 等)、授課語言(Ivy 中英;Claire 中英日韓);Claire 職稱含日式整體師;師資頁 meta 加入老師名字。步行時間依 IG 修正為 2 分鐘。JournalGrid 抽出 client-safe 的 journal-shared.ts 修復 fs 打包錯誤;production build 改可用 NEXT_DIST_DIR 隔離,避免與 dev server 互相寫壞 .next。真實照片(hero/cadillac/teaching/reformer/stretch)與 logo 已接入各版位。
 - 2026-07-07:全站 UI 調整——(1) 字體改為 Inter 為主、字體堆疊預留 Gotham(商業授權,提供 woff2 後自動生效),logo 字標改用 Noto Serif Display Extra Condensed(font-stretch 62.5%),移除 Cormorant/Montserrat/Noto Serif TC;(2) 語言切換改為 Navbar 最後面的小型 select dropdown(手機版移入選單底部),預設中文;(3) Classes 改為「課程卡片(無價格)+ 每分類一張統一價目表」,新增 priceTableTitle/planLabel 字典鍵;(4) About 新增「教室環境 Our Space」區塊(placeholder 照片 ×3);(5) 全站照片與按鈕移除圓角;(6) Journal 更名「最新消息」(en: News/ja: お知らせ),build 通過。
 - 2026-07-07:二次調整——(1) 字級平均化:h1 降為 3xl/4xl、區塊 h2 降為 2xl/3xl、師資海報大名字與 Journal 文章標題同步縮小,縮小全站字級落差;(2) 師資改以 Claire 為首(Claire/Tidus/Ivy/Aaron,meta 同步),Tidus 與 Aaron 補上授課語言(中文/Chinese/中国語);(3) 移除自製 SVG 導引地圖(MoriMap.tsx 已刪)與「怎麼到 Mori」交通指引四卡,About 地圖區只留地址 + Google Maps 嵌入(directions 字典鍵已移除);build 通過。
+- 2026-07-07:三次調整——(1) 右下角浮動 LINE 按鈕改回圓形(全站唯一圓角元素);(2) 語言切換改為自製 dropdown(非原生 select),手機版選單內改為三語直接展開;(3) Classes 課程與價格重新整合為單一卡片(placeholder 照片 + 介紹 + 價格列 + LINE CTA),移除統一價目表與 priceTableTitle/planLabel 字典鍵;(4) 師資卡片移除所有 hover 效果;(5) 首頁 testimonials 見證區塊移除(字典鍵同步刪除,Before/After 圖保留);build 通過。

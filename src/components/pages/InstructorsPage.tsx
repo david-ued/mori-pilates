@@ -28,27 +28,26 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
         <div className="mx-auto max-w-6xl px-6 md:px-8">
           <Stagger className="grid gap-x-10 gap-y-16 md:grid-cols-2">
             {t.list.map((person, i) => (
-              <StaggerItem key={person.name} as="article" className="group flex flex-col">
+              <StaggerItem key={person.name} as="article" className="flex flex-col">
                 <div className="relative overflow-hidden">
                   <PlaceholderImage
                     src={`/images/placeholders/instructor-${i + 1}.svg`}
                     alt={`${person.name} — ${person.title}`}
                     label={dict.common.imagePlaceholder}
                     className="aspect-[4/3]"
-                    imgClassName="transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
                     sizes="(min-width: 768px) 45vw, 100vw"
                   />
                   {/* oversized name, IG-poster style */}
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute left-5 top-4 font-heading text-3xl uppercase tracking-[0.18em] text-mori-deep/25 transition-colors duration-700 group-hover:text-mori-deep/45 md:text-4xl"
+                    className="pointer-events-none absolute left-5 top-4 font-heading text-3xl uppercase tracking-[0.18em] text-mori-deep/25 md:text-4xl"
                   >
                     {person.name}
                   </span>
                 </div>
 
                 <div className="mt-6 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                  <h2 className="font-heading text-2xl text-ink transition-colors duration-500 group-hover:text-mori-deep">
+                  <h2 className="font-heading text-2xl text-ink">
                     {person.name}
                   </h2>
                   <p className="text-sm tracking-[0.1em] text-mori-deep">{person.title}</p>
@@ -58,7 +57,7 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
                   {person.specialties.map((s) => (
                     <li
                       key={s}
-                      className="rounded-full bg-mori-mist px-3 py-1 text-[11px] tracking-wide text-mori-deep transition-colors duration-500 group-hover:bg-mori group-hover:text-cream"
+                      className="rounded-full bg-mori-mist px-3 py-1 text-[11px] tracking-wide text-mori-deep"
                     >
                       {s}
                     </li>

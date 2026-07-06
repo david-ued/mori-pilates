@@ -144,7 +144,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* ---------- Proof / testimonials ---------- */}
+      {/* ---------- Proof ---------- */}
       <section aria-labelledby="home-proof" className="py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-6 md:px-8">
           <FadeUp>
@@ -159,7 +159,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.proofBody}</p>
           </FadeUp>
 
-          <div className="mt-14 grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
+          <div className="mt-14 max-w-4xl">
             <Parallax amount={50}>
               <FadeUp>
                 <figure>
@@ -176,19 +176,6 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </figure>
               </FadeUp>
             </Parallax>
-
-            <Stagger className="flex flex-col justify-center gap-8">
-              {t.testimonials.map((item) => (
-                <StaggerItem key={item.name} as="figure" className="border-l-2 border-mori/30 pl-6">
-                  <blockquote className="text-balance-cjk font-heading text-lg leading-8 text-ink">
-                    「{item.quote}」
-                  </blockquote>
-                  <figcaption className="mt-3 text-xs tracking-[0.12em] text-ink-soft">
-                    {item.name} — {item.detail}
-                  </figcaption>
-                </StaggerItem>
-              ))}
-            </Stagger>
           </div>
         </div>
       </section>

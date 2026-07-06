@@ -72,25 +72,6 @@ const dict: Dict = {
     proofTitle: '身體的改變,看得見',
     proofBody:
       '從駝背改善、肩頸鬆開,到長輩重新蹲得下去、走得更穩——我們重視的是功能性的恢復:讓身體回到能好好生活的狀態。',
-    testimonials: [
-      {
-        quote:
-          '上了三個月的課,困擾多年的下背痛明顯改善,現在可以陪孫子在公園走上一個小時。',
-        name: '陳女士',
-        detail: '68 歲・私人課程學員',
-      },
-      {
-        quote:
-          '老師會先用日式整體幫我把肩頸鬆開,再進器械訓練,每次下課身體都輕了一號。',
-        name: 'Kelly',
-        detail: '上班族・整體×皮拉提斯學員',
-      },
-      {
-        quote: '第一次覺得運動不是壓力。小班的好處是老師真的看得到你,動作做錯馬上被接住。',
-        name: '林先生',
-        detail: '52 歲・三人團體課學員',
-      },
-    ],
     beforeAfterNote: '學員體態紀錄照(Before / After)整理中,將陸續更新。',
     finalCtaTitle: '給身體一次靜下來的機會',
     finalCtaBody: '第一堂體驗課,讓我們先聽你說,再讓身體慢慢開始。',
@@ -176,8 +157,6 @@ const dict: Dict = {
       '所有課程均為預約制。若不確定適合哪一種課程,歡迎先透過 LINE 與我們聊聊你的身體狀態,我們會給你誠實的建議。',
     bookCta: 'LINE 預約',
     trialCta: 'LINE 預約體驗',
-    priceTableTitle: '價目表',
-    planLabel: '課程',
     pilates: {
       title: '皮拉提斯',
       subtitle: 'Pilates|全器械課程・60 分鐘',
