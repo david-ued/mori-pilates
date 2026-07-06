@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#FCFCF0"/>
+<rect width="1200" height="800" fill="url(#g)" opacity="0.5"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#E6EBE0"/><stop offset="1" stop-color="#FCFCF0"/>
+</linearGradient></defs>
+<circle cx="764" cy="396" r="358" fill="#435F47" opacity="0.14"/><circle cx="104" cy="81" r="272" fill="#57805C" opacity="0.10"/><circle cx="1174" cy="309" r="214" fill="#435F47" opacity="0.08"/><circle cx="1088" cy="609" r="185" fill="#435F47" opacity="0.14"/><circle cx="782" cy="34" r="270" fill="#E6EBE0" opacity="0.09"/><circle cx="1151" cy="454" r="198" fill="#435F47" opacity="0.14"/><circle cx="887" cy="587" r="160" fill="none" stroke="#57805C" stroke-width="1.6" opacity="0.34"/><circle cx="529" cy="448" r="149" fill="none" stroke="#57805C" stroke-width="1.6" opacity="0.22"/><circle cx="379" cy="498" r="218" fill="none" stroke="#57805C" stroke-width="2.4" opacity="0.21"/><line x1="1126" y1="161" x2="1486" y2="1" stroke="#7A9C7E" stroke-width="1" opacity="0.15"/><line x1="648" y1="220" x2="1008" y2="60" stroke="#7A9C7E" stroke-width="1" opacity="0.15"/><line x1="1100" y1="743" x2="1460" y2="583" stroke="#7A9C7E" stroke-width="1" opacity="0.17"/><line x1="583" y1="464" x2="943" y2="304" stroke="#7A9C7E" stroke-width="1" opacity="0.10"/>
+<g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+<text x="600" y="400" font-size="68" letter-spacing="20.4" fill="#57805C" opacity="0.75">MORI</text>
+<text x="600" y="451" font-size="19" letter-spacing="7.6000000000000005" fill="#55524E" opacity="0.6" font-family="Helvetica, Arial, sans-serif">JOURNAL</text>
+</g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+<rect width="900" height="1200" fill="#FCFCF0"/>
+<rect width="900" height="1200" fill="url(#g)" opacity="0.5"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#E6EBE0"/><stop offset="1" stop-color="#FCFCF0"/>
+</linearGradient></defs>
+<circle cx="397" cy="502" r="445" fill="#57805C" opacity="0.10"/><circle cx="170" cy="276" r="348" fill="#57805C" opacity="0.06"/><circle cx="423" cy="1108" r="173" fill="#7A9C7E" opacity="0.08"/><circle cx="693" cy="559" r="304" fill="#7A9C7E" opacity="0.10"/><circle cx="82" cy="677" r="382" fill="#7A9C7E" opacity="0.10"/><circle cx="660" cy="931" r="385" fill="#E6EBE0" opacity="0.12"/><circle cx="556" cy="474" r="241" fill="none" stroke="#57805C" stroke-width="2.1" opacity="0.31"/><circle cx="671" cy="521" r="207" fill="none" stroke="#57805C" stroke-width="2.3" opacity="0.17"/><circle cx="235" cy="575" r="260" fill="none" stroke="#57805C" stroke-width="1.7" opacity="0.29"/><line x1="380" y1="1166" x2="650" y2="926" stroke="#7A9C7E" stroke-width="1" opacity="0.17"/><line x1="242" y1="281" x2="512" y2="41" stroke="#7A9C7E" stroke-width="1" opacity="0.25"/><line x1="653" y1="1094" x2="923" y2="854" stroke="#7A9C7E" stroke-width="1" opacity="0.15"/><line x1="186" y1="504" x2="456" y2="264" stroke="#7A9C7E" stroke-width="1" opacity="0.11"/>
+<g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+<text x="450" y="600" font-size="77" letter-spacing="23.099999999999998" fill="#57805C" opacity="0.75">MORI</text>
+<text x="450" y="657.75" font-size="22" letter-spacing="8.8" fill="#55524E" opacity="0.6" font-family="Helvetica, Arial, sans-serif">PORTRAIT COMING SOON</text>
+</g>
+</svg>

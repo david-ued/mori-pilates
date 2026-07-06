@@ -1,0 +1,159 @@
+import type { Locale } from '@/lib/i18n';
+import { getDict } from '@/dictionaries';
+import type { ClassPlan } from '@/dictionaries/types';
+import { LineButton } from '@/components/LineButton';
+import { PlaceholderImage } from '@/components/PlaceholderImage';
+import { FadeUp, Stagger, StaggerItem } from '@/components/motion/Reveal';
+
+function PlanCard({ plan, cta }: { plan: ClassPlan; cta: string }) {
+  return (
+    <StaggerItem
+      as="article"
+      className="flex flex-col rounded-2xl border border-mori/15 bg-cream p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-mori/40 hover:shadow-[0_26px_54px_-30px_rgba(87,128,92,0.55)]"
+    >
+      <p className="font-heading text-sm italic tracking-[0.24em] text-mori/70">{plan.subtitle}</p>
+      <h4 className="mt-2 text-xl font-medium text-ink">{plan.name}</h4>
+      <p className="mt-3 text-sm leading-7 text-ink-soft">{plan.description}</p>
+
+      <dl className="mt-6 flex-1 space-y-3">
+        {plan.tiers.map((tier) => (
+          <div
+            key={tier.label}
+            className={`flex items-baseline justify-between gap-3 rounded-xl px-4 py-3 ${
+              tier.highlight ? 'bg-mori-mist/70 ring-1 ring-mori/25' : 'bg-cream-dim/60'
+            }`}
+          >
+            <dt className="text-sm text-ink-soft">
+              {tier.label}
+              {tier.note ? (
+                <span className="mt-0.5 block text-[11px] tracking-wide text-ink-soft/70">{tier.note}</span>
+              ) : null}
+            </dt>
+            <dd className={`font-heading text-lg ${tier.highlight ? 'text-mori-deep' : 'text-ink'}`}>
+              {tier.price}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      {/* CTA sits right beside the pricing tiers, per PRD */}
+      <div className="mt-7">
+        <LineButton label={cta} variant="outline" size="sm" className="w-full" />
+      </div>
+    </StaggerItem>
+  );
+}
+
+export function ClassesPage({ locale }: { locale: Locale }) {
+  const dict = getDict(locale);
+  const t = dict.classes;
+
+  return (
+    <>
+      {/* header */}
+      <section className="pt-36 pb-14 md:pt-48 md:pb-16">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
+          <FadeUp>
+            <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.kicker}</p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <h1 className="mt-5 font-heading text-4xl leading-snug text-ink md:text-5xl">{t.title}</h1>
+          </FadeUp>
+          <FadeUp delay={0.18}>
+            <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.intro}</p>
+          </FadeUp>
+          <FadeUp delay={0.26} className="mt-8">
+            <LineButton label={t.trialCta} />
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Category A: Pilates */}
+      <section aria-labelledby="classes-pilates" className="py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
+          <div className="grid items-end gap-8 md:grid-cols-[1.2fr_1fr]">
+            <div>
+              <FadeUp>
+                <span className="font-heading text-sm italic tracking-[0.3em] text-mori/70">A</span>
+                <h2 id="classes-pilates" className="mt-3 font-heading text-3xl text-ink md:text-4xl">
+                  {t.pilates.title}
+                </h2>
+                <p className="mt-2 text-sm tracking-[0.12em] text-mori-deep">{t.pilates.subtitle}</p>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="mt-5 max-w-xl leading-8 text-ink-soft">{t.pilates.intro}</p>
+              </FadeUp>
+            </div>
+            <FadeUp delay={0.15}>
+              <PlaceholderImage
+                src="/images/photos/reformer.jpg"
+                alt="Machine Pilates session at Mori"
+                className="aspect-[4/3] rounded-2xl md:aspect-[16/9]"
+                sizes="(min-width: 768px) 40vw, 100vw"
+              />
+            </FadeUp>
+          </div>
+
+          <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
+            {t.pilates.plans.map((plan) => (
+              <PlanCard key={plan.name} plan={plan} cta={t.bookCta} />
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* Category B: Seitai */}
+      <section aria-labelledby="classes-seitai" className="bg-mori-mist/50 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
+          <div className="grid items-end gap-8 md:grid-cols-[1.2fr_1fr]">
+            <div>
+              <FadeUp>
+                <span className="font-heading text-sm italic tracking-[0.3em] text-mori/70">B</span>
+                <h2 id="classes-seitai" className="mt-3 font-heading text-3xl text-ink md:text-4xl">
+                  {t.seitai.title}
+                </h2>
+                <p className="mt-2 text-sm tracking-[0.12em] text-mori-deep">{t.seitai.subtitle}</p>
+              </FadeUp>
+              <FadeUp delay={0.1}>
+                <p className="mt-5 max-w-xl leading-8 text-ink-soft">{t.seitai.intro}</p>
+              </FadeUp>
+            </div>
+            <FadeUp delay={0.15}>
+              <PlaceholderImage
+                src="/images/placeholders/seitai.svg"
+                alt="Japanese Seitai bodywork at Mori"
+                label={dict.common.imagePlaceholder}
+                className="aspect-[4/3] rounded-2xl md:aspect-[16/9]"
+                sizes="(min-width: 768px) 40vw, 100vw"
+              />
+            </FadeUp>
+          </div>
+
+          <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
+            {t.seitai.plans.map((plan) => (
+              <PlanCard key={plan.name} plan={plan} cta={t.bookCta} />
+            ))}
+          </Stagger>
+
+          <FadeUp delay={0.1} className="mt-10">
+            <p className="rounded-2xl border border-mori/25 bg-cream px-6 py-5 text-sm leading-7 text-mori-deep">
+              ✳ {t.seitai.discountNote}
+            </p>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* footnote + CTA */}
+      <section className="py-20 md:py-24">
+        <div className="mx-auto max-w-3xl px-6 text-center md:px-8">
+          <FadeUp>
+            <p className="text-xs tracking-wide text-ink-soft/70">{t.faqNote}</p>
+          </FadeUp>
+          <FadeUp delay={0.1} className="mt-8 flex justify-center">
+            <LineButton label={t.trialCta} size="lg" />
+          </FadeUp>
+        </div>
+      </section>
+    </>
+  );
+}

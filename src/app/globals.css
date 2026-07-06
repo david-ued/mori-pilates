@@ -1,0 +1,198 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Brand palette (strict per PRD) */
+  --color-mori: #57805c;
+  --color-mori-deep: #435f47;
+  --color-mori-soft: #7a9c7e;
+  --color-mori-mist: #e6ebe0;
+  --color-cream: #fcfcf0;
+  --color-cream-dim: #f4f4e4;
+  --color-ink: #242121;
+  --color-ink-soft: #55524e;
+
+  --font-heading:
+    var(--font-cormorant), var(--font-noto-serif-tc), 'Hiragino Mincho ProN', 'Yu Mincho',
+    'Songti TC', serif;
+  --font-body:
+    var(--font-montserrat), var(--font-noto-sans-tc), 'Hiragino Kaku Gothic ProN', 'Yu Gothic',
+    'PingFang TC', 'Microsoft JhengHei', sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-mori);
+  color: var(--color-cream);
+}
+
+/* Elegant serif headings */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* CJK-friendly line breaking for long copy */
+.text-balance-cjk {
+  text-wrap: balance;
+  line-break: strict;
+}
+
+/* Journal article typography (MDX) */
+.prose-mori {
+  max-width: 42rem;
+  line-height: 2;
+  font-size: 1.0625rem;
+  color: var(--color-ink);
+}
+.prose-mori h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin: 2.5em 0 1em;
+  color: var(--color-mori-deep);
+}
+.prose-mori h3 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  margin: 2em 0 0.75em;
+  color: var(--color-mori-deep);
+}
+.prose-mori p {
+  margin: 1.25em 0;
+}
+.prose-mori ul,
+.prose-mori ol {
+  margin: 1.25em 0;
+  padding-left: 1.5em;
+}
+.prose-mori ul {
+  list-style: disc;
+}
+.prose-mori ol {
+  list-style: decimal;
+}
+.prose-mori li {
+  margin: 0.5em 0;
+}
+.prose-mori a {
+  color: var(--color-mori);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.prose-mori blockquote {
+  border-left: 2px solid var(--color-mori);
+  padding-left: 1.25em;
+  margin: 1.75em 0;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+.prose-mori strong {
+  color: var(--color-mori-deep);
+}
+.prose-mori hr {
+  border: none;
+  border-top: 1px solid var(--color-mori-mist);
+  margin: 3em 0;
+}
+
+/* Custom wayfinding map */
+.map-walk-route {
+  stroke-dasharray: 3 9;
+  animation: walk-dash 1.8s linear infinite;
+}
+@keyframes walk-dash {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+.map-pin-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pin-pulse 2.6s ease-out infinite;
+}
+@keyframes pin-pulse {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.7;
+  }
+  75% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+.map-pin-bob {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: pin-bob 3.2s ease-in-out infinite;
+}
+@keyframes pin-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hero scroll hint */
+@keyframes scrolldrip {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(220%);
+  }
+}
+
+/* Journal tables */
+.prose-mori .table-wrap,
+.prose-mori table {
+  width: 100%;
+}
+.prose-mori table {
+  border-collapse: collapse;
+  margin: 1.75em 0;
+  font-size: 0.9375rem;
+  display: block;
+  overflow-x: auto;
+}
+.prose-mori th,
+.prose-mori td {
+  border: 1px solid var(--color-mori-mist);
+  padding: 0.65em 1em;
+  text-align: left;
+  line-height: 1.7;
+  min-width: 7em;
+}
+.prose-mori th {
+  background: var(--color-mori-mist);
+  color: var(--color-mori-deep);
+  font-weight: 500;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<rect width="1200" height="1500" fill="#FCFCF0"/>
+<rect width="1200" height="1500" fill="url(#g)" opacity="0.5"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#E6EBE0"/><stop offset="1" stop-color="#FCFCF0"/>
+</linearGradient></defs>
+<circle cx="1015" cy="1473" r="249" fill="#435F47" opacity="0.11"/><circle cx="789" cy="100" r="261" fill="#E6EBE0" opacity="0.13"/><circle cx="152" cy="459" r="250" fill="#E6EBE0" opacity="0.08"/><circle cx="707" cy="1109" r="297" fill="#7A9C7E" opacity="0.08"/><circle cx="813" cy="389" r="511" fill="#E6EBE0" opacity="0.08"/><circle cx="920" cy="580" r="240" fill="#435F47" opacity="0.10"/><circle cx="348" cy="913" r="343" fill="none" stroke="#57805C" stroke-width="1.8" opacity="0.26"/><circle cx="584" cy="399" r="259" fill="none" stroke="#57805C" stroke-width="2.3" opacity="0.17"/><circle cx="826" cy="432" r="284" fill="none" stroke="#57805C" stroke-width="2.2" opacity="0.20"/><line x1="482" y1="1497" x2="842" y2="1197" stroke="#7A9C7E" stroke-width="1" opacity="0.20"/><line x1="1091" y1="771" x2="1451" y2="471" stroke="#7A9C7E" stroke-width="1" opacity="0.12"/><line x1="564" y1="333" x2="924" y2="33" stroke="#7A9C7E" stroke-width="1" opacity="0.19"/><line x1="600" y1="808" x2="960" y2="508" stroke="#7A9C7E" stroke-width="1" opacity="0.17"/>
+<g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+<text x="600" y="750" font-size="102" letter-spacing="30.599999999999998" fill="#57805C" opacity="0.75">MORI</text>
+<text x="600" y="826.5" font-size="29" letter-spacing="11.600000000000001" fill="#55524E" opacity="0.6" font-family="Helvetica, Arial, sans-serif">STUDIO · IMAGE COMING SOON</text>
+</g>
+</svg>
