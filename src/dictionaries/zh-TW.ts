@@ -18,12 +18,12 @@ const dict: Dict = {
         '私人 1:1、雙人 1:2、三人 1:3 器械皮拉提斯課程,以及 20-60 分鐘日式整體。體驗課程與課卡方案一覽,LINE 線上預約。',
     },
     instructors: {
-      title: '師資介紹|Tidus・Ivy・Claire・Aaron',
+      title: '師資介紹|Claire・Tidus・Ivy・Aaron',
       description:
-        'Mori Pilates 師資團隊 — Tidus、Ivy、Claire、Aaron。擁有 STOTT、Polestar 國際認證,結合器械皮拉提斯、功能性訓練與日式整體,支援中英日韓語授課。',
+        'Mori Pilates 師資團隊 — Claire、Tidus、Ivy、Aaron。擁有 STOTT、Polestar 國際認證,結合器械皮拉提斯、功能性訓練與日式整體,支援中英日韓語授課。',
     },
     journal: {
-      title: 'Journal|最新消息與皮拉提斯知識',
+      title: '最新消息|教室公告與皮拉提斯知識',
       description: 'Mori Pilates 的最新消息、課程公告與皮拉提斯知識文章。',
     },
   },
@@ -32,7 +32,7 @@ const dict: Dict = {
     about: '關於 Mori',
     classes: '課程與價目',
     instructors: '師資',
-    journal: 'Journal',
+    journal: '最新消息',
     book: '預約體驗',
   },
   hero: {
@@ -106,6 +106,10 @@ const dict: Dict = {
       '因此我們把日式整體與器械皮拉提斯放在一起——先以徒手調整鬆開緊繃、找回骨架的位置,再透過器械精準地重建動作模式。我們稱之為「功能性恢復」:目標不是完美的體態,而是能安心生活的身體。蹲得下去、抱得起孫子、走得穩、睡得好——這些,才是我們在意的成果。',
       '在 Mori,我們靜下來,動起來,開始感覺——感覺身體,感覺自己,然後透過皮拉提斯,一步步成為自己。',
     ],
+    spaceKicker: 'Our Space',
+    spaceTitle: '教室環境',
+    spaceBody:
+      '從走出電梯的那一刻起,我們希望空間本身就能讓你慢下來——安靜的光線、留白的動線,以及整齊就位的器械。環境照片整理中,將陸續更新。',
     studioKicker: 'Private Studio',
     studioTitle: '一對一獨立教室,只屬於你的片刻安靜',
     studioParagraphs: [
@@ -135,25 +139,6 @@ const dict: Dict = {
     contactLabel: '聯絡方式',
     contactNote: '我們採線上聯繫,請透過 LINE 官方帳號預約與詢問。',
     openMap: '在 Google Maps 開啟',
-    directionsTitle: '怎麼到 Mori',
-    directions: [
-      {
-        title: '捷運',
-        body: '東門站(淡水信義線/中和新蘆線)3 號出口,沿信義路二段往東步行約 2 分鐘,至金山南路二段口,教室位於 8 樓。',
-      },
-      {
-        title: '公車',
-        body: '「信義金山路口」站下車即達;或「金山市場」站步行約 2 分鐘。',
-      },
-      {
-        title: '開車',
-        body: '建議停放信義路、金山南路周邊之收費停車場(嘟嘟房、Times 等),步行 3-5 分鐘可達。',
-      },
-      {
-        title: '抵達後',
-        body: '請於一樓大廳搭乘電梯至 8 樓。首次上課建議提早 10 分鐘抵達,方便完成報到與更衣。',
-      },
-    ],
     mapNote: '近捷運東門站・永康商圈旁',
     rulesKicker: 'Studio Rules',
     rulesTitle: '教室規則',
@@ -191,6 +176,8 @@ const dict: Dict = {
       '所有課程均為預約制。若不確定適合哪一種課程,歡迎先透過 LINE 與我們聊聊你的身體狀態,我們會給你誠實的建議。',
     bookCta: 'LINE 預約',
     trialCta: 'LINE 預約體驗',
+    priceTableTitle: '價目表',
+    planLabel: '課程',
     pilates: {
       title: '皮拉提斯',
       subtitle: 'Pilates|全器械課程・60 分鐘',
@@ -280,31 +267,6 @@ const dict: Dict = {
     languagesLabel: '授課語言',
     list: [
       {
-        name: 'Tidus',
-        title: '皮拉提斯教師',
-        bio: '身為僵直性脊椎炎患者,親身體會過皮拉提斯帶給身體的改變。從自身修復經驗與生物力學角度出發,專注於「真正有效的身體控制」,而不只是動作表現——適合想改善姿勢與身體控制(含脊椎側彎)、產前產後,以及希望安全恢復訓練、從根本提升運動品質的學員。',
-        specialties: ['動作控制', '體態雕塑', '運動表現'],
-        certifications: [
-          '加拿大 STOTT 一級全器械認證',
-          'STOTT 運動調理',
-          'STOTT 產前產後',
-          'STOTT 長者康復',
-          'Calisthenics 街頭健身一級認證',
-        ],
-      },
-      {
-        name: 'Ivy',
-        title: '皮拉提斯教師',
-        bio: '從大學時期接觸皮拉提斯至今,深深著迷於這項結合優雅與力量控制的運動,格外重視細節與精準。教學中以清楚易懂的引導與循序漸進的安排,協助學員建立身體覺察與動作控制能力,讓每個人都能在自己的節奏中找到力量與掌控感。',
-        specialties: ['初學入門', '體態調整', '核心訓練'],
-        certifications: [
-          'Polestar 北極星全器械認證',
-          'ACE-CPT 國際私人教練證照',
-          '英國西敏寺大學體育與運動營養碩士',
-        ],
-        languages: '中文・English',
-      },
-      {
         name: 'Claire',
         title: '皮拉提斯教師・日式整體師',
         bio: '從科技業轉職,深入且親身理解上班族長時間久坐帶來的肩頸與腰部不適。持續投入重訓、跑步、HYROX、游泳等多元訓練,從「日常身體使用」到「運動表現提升」,全面協助不同背景的學員與選手,發揮更好的身體潛能。',
@@ -319,23 +281,50 @@ const dict: Dict = {
         languages: '中文・English・日本語・한국어',
       },
       {
+        name: 'Tidus',
+        title: '皮拉提斯教師',
+        bio: '身為僵直性脊椎炎患者,親身體會過皮拉提斯帶給身體的改變。從自身修復經驗與生物力學角度出發,專注於「真正有效的身體控制」,而不只是動作表現——適合想改善姿勢與身體控制(含脊椎側彎)、產前產後,以及希望安全恢復訓練、從根本提升運動品質的學員。',
+        specialties: ['動作控制', '體態雕塑', '運動表現'],
+        certifications: [
+          '加拿大 STOTT 一級全器械認證',
+          'STOTT 運動調理',
+          'STOTT 產前產後',
+          'STOTT 長者康復',
+          'Calisthenics 街頭健身一級認證',
+        ],
+        languages: '中文',
+      },
+      {
+        name: 'Ivy',
+        title: '皮拉提斯教師',
+        bio: '從大學時期接觸皮拉提斯至今,深深著迷於這項結合優雅與力量控制的運動,格外重視細節與精準。教學中以清楚易懂的引導與循序漸進的安排,協助學員建立身體覺察與動作控制能力,讓每個人都能在自己的節奏中找到力量與掌控感。',
+        specialties: ['初學入門', '體態調整', '核心訓練'],
+        certifications: [
+          'Polestar 北極星全器械認證',
+          'ACE-CPT 國際私人教練證照',
+          '英國西敏寺大學體育與運動營養碩士',
+        ],
+        languages: '中文・English',
+      },
+      {
         name: 'Aaron',
         title: '皮拉提斯教師',
         bio: '舞蹈科班出身,因長期下背痛而透過皮拉提斯開啟身體探索的旅程。擅長用帶有邏輯性的方式,將皮拉提斯的精神帶給每一位想更了解身體的學員,讓來到教室的每個人都能開始跟身體對話,擁有更健康的生活。',
         specialties: ['初學入門', '體態調整', '核心訓練'],
         certifications: ['Polestar 墊上認證', 'Polestar 核心床結訓', '瑜珈輪認證師資', '爵士舞師資'],
+        languages: '中文',
       },
     ],
     joinNote: '不確定哪位老師適合你?透過 LINE 告訴我們你的身體狀態與目標,我們會為你安排最合適的老師與體驗課。',
   },
   journal: {
-    kicker: 'Journal',
-    title: '最新消息與知識',
+    kicker: 'News',
+    title: '最新消息',
     intro: '教室公告、課程訊息,以及我們想與你分享的皮拉提斯知識。',
     categories: { news: '最新消息', knowledge: '知識分享', interview: '人物專訪' },
     filterAll: '全部',
     readMore: '閱讀全文',
-    backToList: '回到 Journal',
+    backToList: '回到最新消息',
     empty: '文章準備中,敬請期待。',
   },
   cta: {

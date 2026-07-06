@@ -45,7 +45,7 @@ export function JournalPostPage({ locale, post }: { locale: Locale; post: Post }
                 {formatDate(post.date, locale)}
               </time>
             </div>
-            <h1 className="text-balance-cjk mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl md:leading-[1.4]">
+            <h1 className="text-balance-cjk mt-5 font-heading text-2xl leading-snug text-ink md:text-3xl md:leading-[1.45]">
               {post.title}
             </h1>
             {post.description ? (

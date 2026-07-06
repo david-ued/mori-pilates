@@ -50,7 +50,7 @@ export function JournalGrid({
             type="button"
             aria-pressed={active === key}
             onClick={() => setActive(key)}
-            className={`rounded-full border px-5 py-2 text-xs tracking-[0.14em] transition-colors duration-500 ${
+            className={`border px-5 py-2 text-xs tracking-[0.14em] transition-colors duration-500 ${
               active === key
                 ? 'border-mori bg-mori text-cream'
                 : 'border-mori/30 text-mori-deep hover:border-mori hover:bg-mori-mist'
@@ -68,7 +68,7 @@ export function JournalGrid({
           {filtered.map((post) => (
             <StaggerItem key={post.slug} as="article" className="group">
               <Link href={localePath(locale, `/journal/${post.slug}`)} className="block">
-                <div className="overflow-hidden rounded-2xl">
+                <div className="overflow-hidden">
                   <PlaceholderImage
                     src={`/images/placeholders/journal-${post.category}.svg`}
                     alt=""

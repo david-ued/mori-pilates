@@ -18,12 +18,12 @@ const dict: Dict = {
         'Private 1:1, duet 1:2 and trio 1:3 machine Pilates sessions, plus 20–60 minute Japanese Seitai bodywork. Trial classes and class passes — book via LINE.',
     },
     instructors: {
-      title: 'Instructors | Tidus · Ivy · Claire · Aaron',
+      title: 'Instructors | Claire · Tidus · Ivy · Aaron',
       description:
-        'Meet the Mori Pilates team — Tidus, Ivy, Claire and Aaron. STOTT and Polestar certified, combining machine Pilates, functional training and Japanese Seitai. Lessons available in Chinese, English, Japanese and Korean.',
+        'Meet the Mori Pilates team — Claire, Tidus, Ivy and Aaron. STOTT and Polestar certified, combining machine Pilates, functional training and Japanese Seitai. Lessons available in Chinese, English, Japanese and Korean.',
     },
     journal: {
-      title: 'Journal | News & Pilates Knowledge',
+      title: 'News | Studio Updates & Pilates Knowledge',
       description: 'Studio news, class announcements and Pilates knowledge from Mori Pilates.',
     },
   },
@@ -32,7 +32,7 @@ const dict: Dict = {
     about: 'About',
     classes: 'Classes & Pricing',
     instructors: 'Instructors',
-    journal: 'Journal',
+    journal: 'News',
     book: 'Book a Trial',
   },
   hero: {
@@ -109,6 +109,10 @@ const dict: Dict = {
       'So we brought Japanese Seitai and machine Pilates together — first releasing tension and restoring alignment by hand, then precisely rebuilding movement patterns on the apparatus. We call this functional recovery: the goal is not a perfect physique, but a body you can live in with ease. Squatting down, lifting a grandchild, walking steadily, sleeping well — these are the outcomes we care about.',
       'At Mori, we slow down, move, and begin to feel — feel the body, feel ourselves, and through Pilates, become ourselves, one step at a time.',
     ],
+    spaceKicker: 'Our Space',
+    spaceTitle: 'The Studio Environment',
+    spaceBody:
+      'From the moment you step out of the elevator, we want the space itself to slow you down — quiet light, uncluttered room to move, and apparatus neatly in place. Photos of the studio are being prepared and will be added soon.',
     studioKicker: 'Private Studio',
     studioTitle: 'A private one-on-one room — a quiet moment that is yours alone',
     studioParagraphs: [
@@ -138,25 +142,6 @@ const dict: Dict = {
     contactLabel: 'Contact',
     contactNote: 'We handle all bookings and enquiries online — reach us via our official LINE account.',
     openMap: 'Open in Google Maps',
-    directionsTitle: 'How to find us',
-    directions: [
-      {
-        title: 'MRT',
-        body: 'Dongmen Station (Red / Orange Line), Exit 3. Walk east along Xinyi Rd. Sec. 2 for about 2 minutes to the corner of Jinshan S. Rd. Sec. 2. The studio is on the 8th floor.',
-      },
-      {
-        title: 'Bus',
-        body: 'Alight at “Xinyi & Jinshan Intersection” (right at the door), or “Jinshan Market” — a 2-minute walk.',
-      },
-      {
-        title: 'By car',
-        body: 'Paid parking lots (Tobiya, Times, etc.) are available around Xinyi Rd. and Jinshan S. Rd., a 3–5 minute walk away.',
-      },
-      {
-        title: 'On arrival',
-        body: 'Take the elevator from the ground-floor lobby to the 8th floor. For your first visit, please arrive 10 minutes early to check in and change.',
-      },
-    ],
     mapNote: 'Near Dongmen MRT · beside the Yongkang Street area',
     rulesKicker: 'Studio Rules',
     rulesTitle: 'Studio Guidelines',
@@ -194,6 +179,8 @@ const dict: Dict = {
       'All sessions are by appointment. Not sure which class suits you? Message us on LINE about how your body feels — we’ll give you honest advice.',
     bookCta: 'Book via LINE',
     trialCta: 'Book a trial via LINE',
+    priceTableTitle: 'Pricing',
+    planLabel: 'Class',
     pilates: {
       title: 'Pilates',
       subtitle: 'Fully equipped machine sessions · 60 min',
@@ -286,31 +273,6 @@ const dict: Dict = {
     languagesLabel: 'Teaching languages',
     list: [
       {
-        name: 'Tidus',
-        title: 'Pilates Instructor',
-        bio: 'Living with ankylosing spondylitis, Tidus has experienced first-hand how Pilates can change a body. Working from his own recovery and a biomechanics perspective, he focuses on movement control that truly works — not just how a movement looks. Ideal for improving posture and body control (including scoliosis), pre-/post-natal clients, and anyone who wants to rebuild training safely from the ground up.',
-        specialties: ['Movement control', 'Body sculpting', 'Performance'],
-        certifications: [
-          'STOTT PILATES Level 1 Full Apparatus (Canada)',
-          'STOTT Athletic Conditioning',
-          'STOTT Pre- & Post-natal',
-          'STOTT Senior Rehabilitation',
-          'Calisthenics (Street Workout) Level 1',
-        ],
-      },
-      {
-        name: 'Ivy',
-        title: 'Pilates Instructor',
-        bio: 'Ivy discovered Pilates at university and has been captivated ever since by its blend of elegance and strength — and by its respect for detail and precision. She teaches with clear, easy-to-follow cueing and step-by-step progressions, helping every student build body awareness and find strength and control at their own pace.',
-        specialties: ['Beginners', 'Postural adjustment', 'Core training'],
-        certifications: [
-          'Polestar Pilates Comprehensive (Full Apparatus)',
-          'ACE Certified Personal Trainer (ACE-CPT)',
-          'MSc Sport & Exercise Nutrition, University of Westminster (UK)',
-        ],
-        languages: '中文 · English',
-      },
-      {
         name: 'Claire',
         title: 'Pilates Instructor · Seitai Practitioner',
         bio: 'Claire moved to Pilates from a career in tech, so she understands — personally and deeply — the neck, shoulder and lower-back strain of long desk-bound days. She continues to train across weightlifting, running, HYROX and swimming, supporting everyone from everyday bodies to competitive athletes, from daily comfort to peak performance.',
@@ -325,6 +287,32 @@ const dict: Dict = {
         languages: '中文 · English · 日本語 · 한국어',
       },
       {
+        name: 'Tidus',
+        title: 'Pilates Instructor',
+        bio: 'Living with ankylosing spondylitis, Tidus has experienced first-hand how Pilates can change a body. Working from his own recovery and a biomechanics perspective, he focuses on movement control that truly works — not just how a movement looks. Ideal for improving posture and body control (including scoliosis), pre-/post-natal clients, and anyone who wants to rebuild training safely from the ground up.',
+        specialties: ['Movement control', 'Body sculpting', 'Performance'],
+        certifications: [
+          'STOTT PILATES Level 1 Full Apparatus (Canada)',
+          'STOTT Athletic Conditioning',
+          'STOTT Pre- & Post-natal',
+          'STOTT Senior Rehabilitation',
+          'Calisthenics (Street Workout) Level 1',
+        ],
+        languages: 'Chinese',
+      },
+      {
+        name: 'Ivy',
+        title: 'Pilates Instructor',
+        bio: 'Ivy discovered Pilates at university and has been captivated ever since by its blend of elegance and strength — and by its respect for detail and precision. She teaches with clear, easy-to-follow cueing and step-by-step progressions, helping every student build body awareness and find strength and control at their own pace.',
+        specialties: ['Beginners', 'Postural adjustment', 'Core training'],
+        certifications: [
+          'Polestar Pilates Comprehensive (Full Apparatus)',
+          'ACE Certified Personal Trainer (ACE-CPT)',
+          'MSc Sport & Exercise Nutrition, University of Westminster (UK)',
+        ],
+        languages: '中文 · English',
+      },
+      {
         name: 'Aaron',
         title: 'Pilates Instructor',
         bio: 'Trained in dance, Aaron came to Pilates through his own journey with chronic lower-back pain. He is known for teaching with clear logic — bringing the spirit of Pilates to every student who wants to understand their body better, so everyone who walks in can start a conversation with their body and live healthier.',
@@ -335,19 +323,20 @@ const dict: Dict = {
           'Yoga Wheel Instructor',
           'Jazz Dance Instructor',
         ],
+        languages: 'Chinese',
       },
     ],
     joinNote:
       'Not sure which teacher fits you? Tell us about your body and goals on LINE — we’ll match you with the right teacher and trial session.',
   },
   journal: {
-    kicker: 'Journal',
-    title: 'News & Knowledge',
+    kicker: 'News',
+    title: 'News',
     intro: 'Studio announcements, class news, and the Pilates knowledge we want to share with you.',
     categories: { news: 'Latest News', knowledge: 'Knowledge', interview: 'Interviews' },
     filterAll: 'All',
     readMore: 'Read more',
-    backToList: 'Back to Journal',
+    backToList: 'Back to News',
     empty: 'Articles coming soon.',
   },
   cta: {

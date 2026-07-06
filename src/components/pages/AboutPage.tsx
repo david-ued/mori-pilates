@@ -19,7 +19,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.kicker}</p>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <h1 className="text-balance-cjk mt-5 max-w-3xl font-heading text-4xl leading-snug text-ink md:text-5xl md:leading-[1.35]">
+            <h1 className="text-balance-cjk mt-5 max-w-3xl font-heading text-3xl leading-snug text-ink md:text-4xl md:leading-[1.4]">
               {t.title}
             </h1>
           </FadeUp>
@@ -34,14 +34,14 @@ export function AboutPage({ locale }: { locale: Locale }) {
               <PlaceholderImage
                 src="/images/photos/cadillac.jpg"
                 alt="Inside the Mori Pilates studio — Cadillac by the window"
-                className="aspect-[4/3] rounded-2xl shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)] md:sticky md:top-28"
+                className="aspect-[4/3] shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)] md:sticky md:top-28"
                 sizes="(min-width: 768px) 45vw, 100vw"
               />
             </FadeUp>
           </Parallax>
           <div>
             <FadeUp>
-              <h2 id="about-story" className="font-heading text-3xl text-ink md:text-4xl">
+              <h2 id="about-story" className="font-heading text-2xl text-ink md:text-3xl">
                 {t.storyTitle}
               </h2>
             </FadeUp>
@@ -65,7 +65,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.studioKicker}</p>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <h2 id="about-studio" className="mt-5 font-heading text-3xl text-ink md:text-4xl">
+            <h2 id="about-studio" className="mt-5 font-heading text-2xl text-ink md:text-3xl">
               {t.studioTitle}
             </h2>
           </FadeUp>
@@ -76,7 +76,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 <PlaceholderImage
                   src="/images/photos/teaching.jpg"
                   alt="Private one-on-one session at Mori"
-                  className="aspect-[16/10] rounded-2xl"
+                  className="aspect-[16/10]"
                   sizes="(min-width: 768px) 55vw, 100vw"
                 />
               </FadeUp>
@@ -86,7 +86,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 <PlaceholderImage
                   src="/images/photos/forest-walk.jpg"
                   alt="Barefoot in the grass — the spirit of Mori"
-                  className="aspect-[4/5] rounded-2xl md:h-full md:aspect-auto"
+                  className="aspect-[4/5] md:h-full md:aspect-auto"
                   sizes="(min-width: 768px) 35vw, 100vw"
                 />
               </FadeUp>
@@ -108,11 +108,42 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      {/* studio environment gallery */}
+      <section aria-labelledby="about-space" className="pb-24 md:pb-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-8">
+          <FadeUp>
+            <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.spaceKicker}</p>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <h2 id="about-space" className="mt-5 font-heading text-2xl text-ink md:text-3xl">
+              {t.spaceTitle}
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.14}>
+            <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.spaceBody}</p>
+          </FadeUp>
+
+          <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
+            {['studio-1', 'studio-2', 'studio-3'].map((name, i) => (
+              <StaggerItem key={name}>
+                <PlaceholderImage
+                  src={`/images/placeholders/${name}.svg`}
+                  alt={`Mori Pilates studio environment ${i + 1}`}
+                  label={dict.common.imagePlaceholder}
+                  className="aspect-[4/5]"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* values */}
       <section aria-labelledby="about-values" className="bg-mori py-24 text-cream md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-8">
           <FadeUp>
-            <h2 id="about-values" className="font-heading text-3xl md:text-4xl">
+            <h2 id="about-values" className="font-heading text-2xl md:text-3xl">
               {t.valuesTitle}
             </h2>
           </FadeUp>
@@ -130,7 +161,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* location + custom map + directions */}
+      {/* location + google map */}
       <MapSection locale={locale} dict={dict} />
 
       {/* studio rules */}
@@ -140,7 +171,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.rulesKicker}</p>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <h2 id="about-rules" className="mt-5 font-heading text-3xl text-ink md:text-4xl">
+            <h2 id="about-rules" className="mt-5 font-heading text-2xl text-ink md:text-3xl">
               {t.rulesTitle}
             </h2>
           </FadeUp>

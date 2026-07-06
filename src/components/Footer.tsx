@@ -28,9 +28,9 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dict }) {
             height={109}
             className="h-14 w-auto"
           />
-          <p className="mt-4 font-heading text-2xl tracking-[0.22em] text-cream">
+          <p className="mt-4 font-logo text-2xl tracking-[0.22em] text-cream">
             MORI
-            <span className="ml-2 align-middle font-body text-[11px] font-medium tracking-[0.34em] text-cream/60">
+            <span className="ml-2 align-middle text-[11px] font-medium tracking-[0.34em] text-cream/60">
               PILATES
             </span>
           </p>
@@ -75,7 +75,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dict }) {
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-full border border-cream/25 px-5 py-2.5 text-sm transition-all duration-500 hover:border-mori-soft hover:text-mori-soft"
+            className="mt-4 inline-flex items-center gap-2 border border-cream/25 px-5 py-2.5 text-sm transition-all duration-500 hover:border-mori-soft hover:text-mori-soft"
           >
             <LineIcon className="h-4 w-4" />
             {dict.footer.lineLabel}

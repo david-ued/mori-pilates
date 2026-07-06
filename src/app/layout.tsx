@@ -1,28 +1,20 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Montserrat, Noto_Sans_TC, Noto_Serif_TC } from 'next/font/google';
+import { Inter, Noto_Sans_TC, Noto_Serif_Display } from 'next/font/google';
 import { SITE_URL, BRAND } from '@/lib/site';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-inter',
   display: 'swap',
 });
 
-const montserrat = Montserrat({
+// Logo wordmark only — rendered extra-condensed via `font-stretch: 62.5%` (.font-logo)
+const notoSerifDisplay = Noto_Serif_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-montserrat',
+  axes: ['wdth'],
+  variable: '--font-noto-serif-display',
   display: 'swap',
-});
-
-const notoSerifTC = Noto_Serif_TC({
-  weight: ['400', '500', '600'],
-  variable: '--font-noto-serif-tc',
-  display: 'swap',
-  preload: false,
 });
 
 const notoSansTC = Noto_Sans_TC({
@@ -53,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="zh-Hant-TW"
       suppressHydrationWarning
-      className={`${cormorant.variable} ${montserrat.variable} ${notoSerifTC.variable} ${notoSansTC.variable}`}
+      className={`${inter.variable} ${notoSerifDisplay.variable} ${notoSansTC.variable}`}
     >
       <body>{children}</body>
     </html>

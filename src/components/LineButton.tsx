@@ -16,7 +16,7 @@ export function LineButton({
   className?: string;
 }) {
   const base =
-    'group inline-flex items-center justify-center gap-2.5 rounded-full font-medium tracking-wide transition-all duration-500 ease-out';
+    'group inline-flex items-center justify-center gap-2.5 font-medium tracking-wide transition-all duration-500 ease-out';
   const sizes = {
     sm: 'px-5 py-2 text-sm',
     md: 'px-7 py-3 text-sm md:text-base',

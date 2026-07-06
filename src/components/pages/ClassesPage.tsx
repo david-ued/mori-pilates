@@ -5,42 +5,72 @@ import { LineButton } from '@/components/LineButton';
 import { PlaceholderImage } from '@/components/PlaceholderImage';
 import { FadeUp, Stagger, StaggerItem } from '@/components/motion/Reveal';
 
-function PlanCard({ plan, cta }: { plan: ClassPlan; cta: string }) {
+function PlanCard({ plan }: { plan: ClassPlan }) {
   return (
     <StaggerItem
       as="article"
-      className="flex flex-col rounded-2xl border border-mori/15 bg-cream p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-mori/40 hover:shadow-[0_26px_54px_-30px_rgba(87,128,92,0.55)]"
+      className="border border-mori/15 bg-cream p-8 transition-all duration-500 hover:border-mori/40"
     >
       <p className="font-heading text-sm italic tracking-[0.24em] text-mori/70">{plan.subtitle}</p>
       <h4 className="mt-2 text-xl font-medium text-ink">{plan.name}</h4>
       <p className="mt-3 text-sm leading-7 text-ink-soft">{plan.description}</p>
-
-      <dl className="mt-6 flex-1 space-y-3">
-        {plan.tiers.map((tier) => (
-          <div
-            key={tier.label}
-            className={`flex items-baseline justify-between gap-3 rounded-xl px-4 py-3 ${
-              tier.highlight ? 'bg-mori-mist/70 ring-1 ring-mori/25' : 'bg-cream-dim/60'
-            }`}
-          >
-            <dt className="text-sm text-ink-soft">
-              {tier.label}
-              {tier.note ? (
-                <span className="mt-0.5 block text-[11px] tracking-wide text-ink-soft/70">{tier.note}</span>
-              ) : null}
-            </dt>
-            <dd className={`font-heading text-lg ${tier.highlight ? 'text-mori-deep' : 'text-ink'}`}>
-              {tier.price}
-            </dd>
-          </div>
-        ))}
-      </dl>
-
-      {/* CTA sits right beside the pricing tiers, per PRD */}
-      <div className="mt-7">
-        <LineButton label={cta} variant="outline" size="sm" className="w-full" />
-      </div>
     </StaggerItem>
+  );
+}
+
+/** One consolidated price table per category, instead of prices on every card. */
+function PriceTable({
+  plans,
+  title,
+  planLabel,
+}: {
+  plans: ClassPlan[];
+  title: string;
+  planLabel: string;
+}) {
+  const tierLabels = plans[0]?.tiers.map((t) => t.label) ?? [];
+  return (
+    <div>
+      <h3 className="font-heading text-xl text-mori-deep">{title}</h3>
+      <div className="mt-5 overflow-x-auto">
+        <table className="w-full min-w-[540px] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-mori/30 text-left">
+              <th scope="col" className="py-3 pr-6 font-medium tracking-wide text-mori-deep">
+                {planLabel}
+              </th>
+              {tierLabels.map((l) => (
+                <th key={l} scope="col" className="py-3 pr-6 font-medium tracking-wide text-mori-deep">
+                  {l}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {plans.map((p) => (
+              <tr key={p.name} className="border-b border-mori/10">
+                <th scope="row" className="py-4 pr-6 text-left font-normal text-ink">
+                  {p.name}
+                </th>
+                {p.tiers.map((tier) => (
+                  <td
+                    key={tier.label}
+                    className={`py-4 pr-6 ${tier.highlight ? 'font-medium text-mori-deep' : 'text-ink'}`}
+                  >
+                    {tier.price}
+                    {tier.note ? (
+                      <span className="mt-0.5 block text-[11px] tracking-wide text-ink-soft/70">
+                        {tier.note}
+                      </span>
+                    ) : null}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 
@@ -57,7 +87,7 @@ export function ClassesPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.kicker}</p>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <h1 className="mt-5 font-heading text-4xl leading-snug text-ink md:text-5xl">{t.title}</h1>
+            <h1 className="mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl">{t.title}</h1>
           </FadeUp>
           <FadeUp delay={0.18}>
             <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.intro}</p>
@@ -75,7 +105,7 @@ export function ClassesPage({ locale }: { locale: Locale }) {
             <div>
               <FadeUp>
                 <span className="font-heading text-sm italic tracking-[0.3em] text-mori/70">A</span>
-                <h2 id="classes-pilates" className="mt-3 font-heading text-3xl text-ink md:text-4xl">
+                <h2 id="classes-pilates" className="mt-3 font-heading text-2xl text-ink md:text-3xl">
                   {t.pilates.title}
                 </h2>
                 <p className="mt-2 text-sm tracking-[0.12em] text-mori-deep">{t.pilates.subtitle}</p>
@@ -88,7 +118,7 @@ export function ClassesPage({ locale }: { locale: Locale }) {
               <PlaceholderImage
                 src="/images/photos/reformer.jpg"
                 alt="Machine Pilates session at Mori"
-                className="aspect-[4/3] rounded-2xl md:aspect-[16/9]"
+                className="aspect-[4/3] md:aspect-[16/9]"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </FadeUp>
@@ -96,9 +126,16 @@ export function ClassesPage({ locale }: { locale: Locale }) {
 
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
             {t.pilates.plans.map((plan) => (
-              <PlanCard key={plan.name} plan={plan} cta={t.bookCta} />
+              <PlanCard key={plan.name} plan={plan} />
             ))}
           </Stagger>
+
+          <FadeUp delay={0.1} className="mt-14">
+            <PriceTable plans={t.pilates.plans} title={t.priceTableTitle} planLabel={t.planLabel} />
+          </FadeUp>
+          <FadeUp delay={0.15} className="mt-8">
+            <LineButton label={t.bookCta} variant="outline" size="sm" />
+          </FadeUp>
         </div>
       </section>
 
@@ -109,7 +146,7 @@ export function ClassesPage({ locale }: { locale: Locale }) {
             <div>
               <FadeUp>
                 <span className="font-heading text-sm italic tracking-[0.3em] text-mori/70">B</span>
-                <h2 id="classes-seitai" className="mt-3 font-heading text-3xl text-ink md:text-4xl">
+                <h2 id="classes-seitai" className="mt-3 font-heading text-2xl text-ink md:text-3xl">
                   {t.seitai.title}
                 </h2>
                 <p className="mt-2 text-sm tracking-[0.12em] text-mori-deep">{t.seitai.subtitle}</p>
@@ -123,7 +160,7 @@ export function ClassesPage({ locale }: { locale: Locale }) {
                 src="/images/placeholders/seitai.svg"
                 alt="Japanese Seitai bodywork at Mori"
                 label={dict.common.imagePlaceholder}
-                className="aspect-[4/3] rounded-2xl md:aspect-[16/9]"
+                className="aspect-[4/3] md:aspect-[16/9]"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </FadeUp>
@@ -131,12 +168,19 @@ export function ClassesPage({ locale }: { locale: Locale }) {
 
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
             {t.seitai.plans.map((plan) => (
-              <PlanCard key={plan.name} plan={plan} cta={t.bookCta} />
+              <PlanCard key={plan.name} plan={plan} />
             ))}
           </Stagger>
 
+          <FadeUp delay={0.1} className="mt-14">
+            <PriceTable plans={t.seitai.plans} title={t.priceTableTitle} planLabel={t.planLabel} />
+          </FadeUp>
+          <FadeUp delay={0.15} className="mt-8">
+            <LineButton label={t.bookCta} variant="outline" size="sm" />
+          </FadeUp>
+
           <FadeUp delay={0.1} className="mt-10">
-            <p className="rounded-2xl border border-mori/25 bg-cream px-6 py-5 text-sm leading-7 text-mori-deep">
+            <p className="border border-mori/25 bg-cream px-6 py-5 text-sm leading-7 text-mori-deep">
               ✳ {t.seitai.discountNote}
             </p>
           </FadeUp>

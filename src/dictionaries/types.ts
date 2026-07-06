@@ -68,6 +68,9 @@ export interface Dict {
     title: string;
     storyTitle: string;
     storyParagraphs: string[];
+    spaceKicker: string;
+    spaceTitle: string;
+    spaceBody: string;
     studioKicker: string;
     studioTitle: string;
     studioParagraphs: string[];
@@ -81,8 +84,6 @@ export interface Dict {
     contactLabel: string;
     contactNote: string;
     openMap: string;
-    directionsTitle: string;
-    directions: { title: string; body: string }[];
     mapNote: string;
     rulesKicker: string;
     rulesTitle: string;
@@ -94,6 +95,8 @@ export interface Dict {
     intro: string;
     bookCta: string;
     trialCta: string;
+    priceTableTitle: string;
+    planLabel: string;
     pilates: {
       title: string;
       subtitle: string;

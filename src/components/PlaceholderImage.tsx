@@ -34,7 +34,7 @@ export function PlaceholderImage({
         className={`object-cover ${imgClassName}`}
       />
       {label ? (
-        <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-cream/85 px-3 py-1 text-[11px] tracking-[0.16em] text-ink-soft backdrop-blur-sm">
+        <span className="pointer-events-none absolute bottom-3 right-3 bg-cream/85 px-3 py-1 text-[11px] tracking-[0.16em] text-ink-soft backdrop-blur-sm">
           {label}
         </span>
       ) : null}

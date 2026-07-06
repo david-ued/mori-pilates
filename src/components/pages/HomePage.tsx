@@ -32,7 +32,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </p>
           </HeroReveal>
           <HeroReveal delay={0.55}>
-            <h1 className="text-balance-cjk mt-6 max-w-3xl font-heading text-3xl leading-[1.65] text-ink md:text-[2.75rem] md:leading-[1.6]">
+            <h1 className="text-balance-cjk mt-6 max-w-3xl font-heading text-3xl leading-[1.65] text-ink md:text-4xl md:leading-[1.6]">
               {dict.hero.philosophy}
             </h1>
           </HeroReveal>
@@ -67,7 +67,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               <PlaceholderImage
                 src="/images/photos/stretch-portrait.jpg"
                 alt="Reformer side stretch at Mori Pilates"
-                className="aspect-[4/5] rounded-2xl shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)]"
+                className="aspect-[4/5] shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)]"
                 sizes="(min-width: 768px) 45vw, 100vw"
               />
             </FadeUp>
@@ -77,7 +77,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.aboutKicker}</p>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <h2 id="home-about" className="text-balance-cjk mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl">
+              <h2 id="home-about" className="text-balance-cjk mt-5 font-heading text-2xl leading-snug text-ink md:text-3xl">
                 {t.aboutTitle}
               </h2>
             </FadeUp>
@@ -106,7 +106,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.servicesKicker}</p>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <h2 id="home-services" className="text-balance-cjk mt-5 max-w-2xl font-heading text-3xl leading-snug text-ink md:text-4xl">
+            <h2 id="home-services" className="text-balance-cjk mt-5 max-w-2xl font-heading text-2xl leading-snug text-ink md:text-3xl">
               {t.servicesTitle}
             </h2>
           </FadeUp>
@@ -151,7 +151,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.proofKicker}</p>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <h2 id="home-proof" className="text-balance-cjk mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl">
+            <h2 id="home-proof" className="text-balance-cjk mt-5 font-heading text-2xl leading-snug text-ink md:text-3xl">
               {t.proofTitle}
             </h2>
           </FadeUp>
@@ -167,7 +167,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                     src="/images/placeholders/before-after.svg"
                     alt="Before and after — functional recovery results"
                     label={dict.common.imagePlaceholder}
-                    className="aspect-[14/9] rounded-2xl shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)]"
+                    className="aspect-[14/9] shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)]"
                     sizes="(min-width: 1024px) 55vw, 100vw"
                   />
                   <figcaption className="mt-3 text-xs tracking-wide text-ink-soft/80">
@@ -199,7 +199,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div aria-hidden className="absolute -bottom-32 -left-16 h-80 w-80 rounded-full border border-cream/10" />
         <div className="relative mx-auto max-w-3xl px-6 text-center md:px-8">
           <FadeUp>
-            <h2 id="home-cta" className="text-balance-cjk font-heading text-3xl leading-snug text-cream md:text-4xl">
+            <h2 id="home-cta" className="text-balance-cjk font-heading text-2xl leading-snug text-cream md:text-3xl">
               {t.finalCtaTitle}
             </h2>
           </FadeUp>

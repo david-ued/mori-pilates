@@ -16,7 +16,7 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.kicker}</p>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <h1 className="mt-5 font-heading text-4xl leading-snug text-ink md:text-5xl">{t.title}</h1>
+            <h1 className="mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl">{t.title}</h1>
           </FadeUp>
           <FadeUp delay={0.18}>
             <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.intro}</p>
@@ -29,7 +29,7 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
           <Stagger className="grid gap-x-10 gap-y-16 md:grid-cols-2">
             {t.list.map((person, i) => (
               <StaggerItem key={person.name} as="article" className="group flex flex-col">
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden">
                   <PlaceholderImage
                     src={`/images/placeholders/instructor-${i + 1}.svg`}
                     alt={`${person.name} — ${person.title}`}
@@ -41,7 +41,7 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
                   {/* oversized name, IG-poster style */}
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute left-5 top-4 font-heading text-4xl uppercase tracking-[0.18em] text-mori-deep/25 transition-colors duration-700 group-hover:text-mori-deep/45 md:text-5xl"
+                    className="pointer-events-none absolute left-5 top-4 font-heading text-3xl uppercase tracking-[0.18em] text-mori-deep/25 transition-colors duration-700 group-hover:text-mori-deep/45 md:text-4xl"
                   >
                     {person.name}
                   </span>

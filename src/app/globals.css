@@ -11,12 +11,16 @@
   --color-ink: #242121;
   --color-ink-soft: #55524e;
 
+  /* Gotham is licensed — drop its .woff2 into the project (next/font/local) and it
+     takes over headings automatically; until then Inter renders. */
   --font-heading:
-    var(--font-cormorant), var(--font-noto-serif-tc), 'Hiragino Mincho ProN', 'Yu Mincho',
-    'Songti TC', serif;
+    'Gotham', var(--font-inter), var(--font-noto-sans-tc), 'PingFang TC',
+    'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Microsoft JhengHei', sans-serif;
   --font-body:
-    var(--font-montserrat), var(--font-noto-sans-tc), 'Hiragino Kaku Gothic ProN', 'Yu Gothic',
-    'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    var(--font-inter), 'Gotham', var(--font-noto-sans-tc), 'PingFang TC',
+    'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Microsoft JhengHei', sans-serif;
+  /* Logo wordmark only */
+  --font-logo: var(--font-noto-serif-display), 'Noto Serif Display', serif;
 
   --animate-marquee: marquee 40s linear infinite;
 
@@ -47,9 +51,14 @@ body {
   color: var(--color-cream);
 }
 
-/* Elegant serif headings */
 .font-heading {
   font-family: var(--font-heading);
+}
+
+/* Logo wordmark: Noto Serif Display Extra Condensed */
+.font-logo {
+  font-family: var(--font-logo);
+  font-stretch: 62.5%;
 }
 
 /* CJK-friendly line breaking for long copy */

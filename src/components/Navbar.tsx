@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { locales, localePath, localeLabel, defaultLocale, type Locale } from '@/lib/i18n';
 import type { Dict } from '@/dictionaries';
@@ -72,7 +72,7 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
         {/* Logo + wordmark */}
         <Link
           href={localePath(locale, '/')}
-          className="flex items-center gap-2.5 font-heading text-xl tracking-[0.22em] text-mori-deep md:gap-3 md:text-2xl"
+          className="flex items-center gap-2.5 font-logo text-xl tracking-[0.22em] text-mori-deep md:gap-3 md:text-2xl"
         >
           <Image
             src="/assets/mori-logo-green.png"
@@ -84,7 +84,7 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
           />
           <span>
             MORI
-            <span className="ml-2 text-[10px] font-body font-medium tracking-[0.34em] text-ink-soft align-middle md:text-[11px]">
+            <span className="ml-2 text-[10px] font-medium tracking-[0.34em] text-ink-soft align-middle md:text-[11px]">
               PILATES
             </span>
           </span>
@@ -112,22 +112,22 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
             ))}
           </ul>
 
-          <LangSwitcher locale={locale} basePath={basePath} />
-
           <a
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-mori px-5 py-2.5 text-sm text-cream transition-all duration-500 hover:-translate-y-0.5 hover:bg-mori-deep"
+            className="inline-flex items-center gap-2 bg-mori px-5 py-2.5 text-sm text-cream transition-all duration-500 hover:-translate-y-0.5 hover:bg-mori-deep"
           >
             <LineIcon className="h-4 w-4" />
             {dict.nav.book}
           </a>
+
+          {/* language dropdown sits last, kept small */}
+          <LangSwitcher locale={locale} basePath={basePath} />
         </div>
 
         {/* Mobile toggles */}
         <div className="flex items-center gap-4 lg:hidden">
-          <LangSwitcher locale={locale} basePath={basePath} compact />
           <button
             type="button"
             aria-label="Menu"
@@ -192,11 +192,20 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
                   href={LINE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-mori px-6 py-3 text-cream"
+                  className="inline-flex items-center gap-2 bg-mori px-6 py-3 text-cream"
                 >
                   <LineIcon className="h-4 w-4" />
                   {dict.nav.book}
                 </a>
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, x: -14 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: EASE } },
+                }}
+                className="pt-5"
+              >
+                <LangSwitcher locale={locale} basePath={basePath} />
               </motion.li>
             </motion.ul>
           </motion.div>
@@ -206,35 +215,21 @@ export function Navbar({ locale, dict }: { locale: Locale; dict: Dict }) {
   );
 }
 
-function LangSwitcher({
-  locale,
-  basePath,
-  compact = false,
-}: {
-  locale: Locale;
-  basePath: string;
-  compact?: boolean;
-}) {
+/** Small language dropdown; navigates to the same page under the chosen locale. */
+function LangSwitcher({ locale, basePath }: { locale: Locale; basePath: string }) {
+  const router = useRouter();
   return (
-    <div
-      className={`flex items-center ${compact ? 'gap-2 text-xs' : 'gap-2.5 text-[13px]'} tracking-wide`}
+    <select
+      aria-label="Language"
+      value={locale}
+      onChange={(e) => router.push(localePath(e.target.value as Locale, basePath))}
+      className="cursor-pointer border border-ink/15 bg-transparent px-1.5 py-1 text-xs text-ink-soft transition-colors hover:border-mori/50 focus:border-mori focus:outline-none"
     >
-      {locales.map((l, i) => (
-        <span key={l} className="flex items-center gap-2.5">
-          {i > 0 && <span className="h-3 w-px bg-ink/20" aria-hidden />}
-          <Link
-            href={localePath(l, basePath)}
-            hrefLang={l}
-            className={
-              l === locale
-                ? 'text-mori-deep underline underline-offset-4 decoration-mori/50'
-                : 'text-ink-soft/70 transition-colors hover:text-mori-deep'
-            }
-          >
-            {localeLabel[l]}
-          </Link>
-        </span>
+      {locales.map((l) => (
+        <option key={l} value={l}>
+          {localeLabel[l]}
+        </option>
       ))}
-    </div>
+    </select>
   );
 }

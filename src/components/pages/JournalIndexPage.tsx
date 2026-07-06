@@ -17,7 +17,7 @@ export function JournalIndexPage({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.kicker}</p>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <h1 className="mt-5 font-heading text-4xl leading-snug text-ink md:text-5xl">{t.title}</h1>
+            <h1 className="mt-5 font-heading text-3xl leading-snug text-ink md:text-4xl">{t.title}</h1>
           </FadeUp>
           <FadeUp delay={0.18}>
             <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.intro}</p>
