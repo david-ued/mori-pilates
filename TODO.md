@@ -37,7 +37,7 @@
 - [x] `npm run build` 通過:29 頁全靜態輸出
 - [x] README(新增文章教學、照片替換教學、Zeabur + Cloudflare 部署)
 - [x] CI(GitHub Actions:push/PR 自動 build 驗證)
-- [ ] git commit + push(待確認後執行)
+- [x] git commit + push(2026-07-07 初始 commit `1c59103` 已推上 origin/main)
 
 ## 素材狀態
 已上線的真實素材(來源 `public/assets/`,壓縮版在 `public/images/photos/`):
