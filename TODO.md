@@ -58,7 +58,7 @@
 
 ## 待確認事項
 - [x] 正式網域:`https://moripilates.com` 已上線,與 `src/lib/site.ts` 的 `SITE_URL` 一致
-- [ ] Google Search Console:sitemap(https://moripilates.com/sitemap.xml,27 條)與 robots.txt 已上線;需以 Google 帳號驗證網域所有權後,在 GSC「Sitemap」頁提交 `sitemap.xml`(需人工操作,見 2026-07-07 對話說明)
+- [ ] Google Search Console:sitemap(https://moripilates.com/sitemap.xml,21 條)與 robots.txt 已上線;需以 Google 帳號驗證網域所有權後,在 GSC「Sitemap」頁提交 `sitemap.xml`(需人工操作,見 2026-07-07 對話說明)
 - [ ] 英/日文文案是否需母語者潤稿(目前為初稿)
 - [x] 見證(testimonials)已自首頁移除(原為示意文案);日後若要放真實學員回饋可再加回
 - [x] 交通指引:已依 IG 官方資訊確認為「東門站 3 號出口・步行約 2 分鐘」(字典與自製地圖已同步)
@@ -74,3 +74,4 @@
 - 2026-07-07:二次調整——(1) 字級平均化:h1 降為 3xl/4xl、區塊 h2 降為 2xl/3xl、師資海報大名字與 Journal 文章標題同步縮小,縮小全站字級落差;(2) 師資改以 Claire 為首(Claire/Tidus/Ivy/Aaron,meta 同步),Tidus 與 Aaron 補上授課語言(中文/Chinese/中国語);(3) 移除自製 SVG 導引地圖(MoriMap.tsx 已刪)與「怎麼到 Mori」交通指引四卡,About 地圖區只留地址 + Google Maps 嵌入(directions 字典鍵已移除);build 通過。
 - 2026-07-07:三次調整——(1) 右下角浮動 LINE 按鈕改回圓形(全站唯一圓角元素);(2) 語言切換改為自製 dropdown(非原生 select),手機版選單內改為三語直接展開;(3) Classes 課程與價格重新整合為單一卡片(placeholder 照片 + 介紹 + 價格列 + LINE CTA),移除統一價目表與 priceTableTitle/planLabel 字典鍵;(4) 師資卡片移除所有 hover 效果;(5) 首頁 testimonials 見證區塊移除(字典鍵同步刪除,Before/After 圖保留);build 通過。
 - 2026-07-07:師資照片上線——Claire/Tidus/Ivy 真實照片(assets 原檔壓縮至 1800px/quality 78 → images/photos/instructor-*.jpg),卡片改 3:4 直式、桌面三欄;Aaron 無照片先隱藏(資料保留於字典,INSTRUCTOR_PHOTOS 加照片路徑即恢復),meta 與介紹文字同步移除 Aaron;build 通過。
+- 2026-07-08:Journal 內容全面替換——刪除 4 篇範例文章(grand-opening/what-is-seitai/pilates-for-seniors/interview-tidus),改為 2 篇正式貼文(來源:Downloads 的 docx):`pilates-for-runners`(為什麼跑者需要皮拉提斯)與 `scoliosis-and-pilates`(脊椎側彎可以做皮拉提斯嗎),分類皆為 knowledge;英日文版為中文初稿翻譯(待母語者潤稿);build 通過。
