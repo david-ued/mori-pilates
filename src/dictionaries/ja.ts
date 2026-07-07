@@ -18,9 +18,9 @@ const dict: Dict = {
         'プライベート1:1、デュエット1:2、トリオ1:3のマシンピラティスと、20〜60分の日式整体。体験レッスン・回数券のご案内。ご予約はLINEで。',
     },
     instructors: {
-      title: 'インストラクター|Claire・Tidus・Ivy・Aaron',
+      title: 'インストラクター|Claire・Tidus・Ivy',
       description:
-        'Mori Pilatesのインストラクター、Claire・Tidus・Ivy・Aaronをご紹介。STOTT・Polestar国際認定。マシンピラティス×機能訓練×日式整体。日本語対応のインストラクターも在籍しています。',
+        'Mori Pilatesのインストラクター、Claire・Tidus・Ivyをご紹介。STOTT・Polestar国際認定。マシンピラティス×機能訓練×日式整体。日本語対応のインストラクターも在籍しています。',
     },
     journal: {
       title: 'お知らせ|スタジオ情報・ピラティスの知識',
@@ -241,7 +241,7 @@ const dict: Dict = {
     kicker: 'Instructors',
     title: 'インストラクター',
     intro:
-      'Moriのインストラクターは、それぞれ異なる身体の経験からここに辿り着きました——脊椎疾患からの回復、ダンス、ストリートワークアウト、IT業界でのデスクワーク。共通するのは、動きの前に「人」を見ること。',
+      'Moriのインストラクターは、それぞれ異なる身体の経験からここに辿り着きました——脊椎疾患からの回復、ストリートワークアウト、IT業界でのデスクワーク。共通するのは、動きの前に「人」を見ること。',
     certsLabel: '資格・認定',
     languagesLabel: '対応言語',
     list: [

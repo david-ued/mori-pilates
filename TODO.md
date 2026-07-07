@@ -49,14 +49,16 @@
 - [x] Logo(綠/白)→ Navbar 與 Footer(`/assets/mori-logo-*.png`);綠色 logo 另產生 favicon(`src/app/icon.png`,256×256 奶油底)並補 JSON-LD LocalBusiness 的 logo 欄位
 
 仍為 placeholder,待補:
-- [ ] 老師個人照 ×4(instructor-1~4.svg;IG 海報上的個人照若有原檔可直接換)
+- [x] 老師個人照:Claire/Tidus/Ivy 已上真實照片(`images/photos/instructor-*.jpg`,3:4 直式)
+- [ ] Aaron 個人照(目前無照片,師資頁已隱藏;照片放入 `public/assets/` 後在 `InstructorsPage.tsx` 的 `INSTRUCTOR_PHOTOS` 加一行即可顯示)
 - [ ] 功能性恢復 Before/After 照(before-after.svg)
 - [ ] 日式整體情境照(seitai.svg)
 - [ ] Journal 三分類封面照(journal-news / knowledge / interview.svg)
 - [ ] OG 分享圖 1200×630(`public/images/og.svg`,建議用 hero 照 + logo 重做)
 
 ## 待確認事項
-- [ ] 正式網域:上線前修改 `src/lib/site.ts` 的 `SITE_URL`(現為 `https://moripilates.com`)
+- [x] 正式網域:`https://moripilates.com` 已上線,與 `src/lib/site.ts` 的 `SITE_URL` 一致
+- [ ] Google Search Console:sitemap(https://moripilates.com/sitemap.xml,27 條)與 robots.txt 已上線;需以 Google 帳號驗證網域所有權後,在 GSC「Sitemap」頁提交 `sitemap.xml`(需人工操作,見 2026-07-07 對話說明)
 - [ ] 英/日文文案是否需母語者潤稿(目前為初稿)
 - [x] 見證(testimonials)已自首頁移除(原為示意文案);日後若要放真實學員回饋可再加回
 - [x] 交通指引:已依 IG 官方資訊確認為「東門站 3 號出口・步行約 2 分鐘」(字典與自製地圖已同步)
@@ -71,3 +73,4 @@
 - 2026-07-07:全站 UI 調整——(1) 字體改為 Inter 為主、字體堆疊預留 Gotham(商業授權,提供 woff2 後自動生效),logo 字標改用 Noto Serif Display Extra Condensed(font-stretch 62.5%),移除 Cormorant/Montserrat/Noto Serif TC;(2) 語言切換改為 Navbar 最後面的小型 select dropdown(手機版移入選單底部),預設中文;(3) Classes 改為「課程卡片(無價格)+ 每分類一張統一價目表」,新增 priceTableTitle/planLabel 字典鍵;(4) About 新增「教室環境 Our Space」區塊(placeholder 照片 ×3);(5) 全站照片與按鈕移除圓角;(6) Journal 更名「最新消息」(en: News/ja: お知らせ),build 通過。
 - 2026-07-07:二次調整——(1) 字級平均化:h1 降為 3xl/4xl、區塊 h2 降為 2xl/3xl、師資海報大名字與 Journal 文章標題同步縮小,縮小全站字級落差;(2) 師資改以 Claire 為首(Claire/Tidus/Ivy/Aaron,meta 同步),Tidus 與 Aaron 補上授課語言(中文/Chinese/中国語);(3) 移除自製 SVG 導引地圖(MoriMap.tsx 已刪)與「怎麼到 Mori」交通指引四卡,About 地圖區只留地址 + Google Maps 嵌入(directions 字典鍵已移除);build 通過。
 - 2026-07-07:三次調整——(1) 右下角浮動 LINE 按鈕改回圓形(全站唯一圓角元素);(2) 語言切換改為自製 dropdown(非原生 select),手機版選單內改為三語直接展開;(3) Classes 課程與價格重新整合為單一卡片(placeholder 照片 + 介紹 + 價格列 + LINE CTA),移除統一價目表與 priceTableTitle/planLabel 字典鍵;(4) 師資卡片移除所有 hover 效果;(5) 首頁 testimonials 見證區塊移除(字典鍵同步刪除,Before/After 圖保留);build 通過。
+- 2026-07-07:師資照片上線——Claire/Tidus/Ivy 真實照片(assets 原檔壓縮至 1800px/quality 78 → images/photos/instructor-*.jpg),卡片改 3:4 直式、桌面三欄;Aaron 無照片先隱藏(資料保留於字典,INSTRUCTOR_PHOTOS 加照片路徑即恢復),meta 與介紹文字同步移除 Aaron;build 通過。

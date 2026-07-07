@@ -18,9 +18,9 @@ const dict: Dict = {
         'Private 1:1, duet 1:2 and trio 1:3 machine Pilates sessions, plus 20–60 minute Japanese Seitai bodywork. Trial classes and class passes — book via LINE.',
     },
     instructors: {
-      title: 'Instructors | Claire · Tidus · Ivy · Aaron',
+      title: 'Instructors | Claire · Tidus · Ivy',
       description:
-        'Meet the Mori Pilates team — Claire, Tidus, Ivy and Aaron. STOTT and Polestar certified, combining machine Pilates, functional training and Japanese Seitai. Lessons available in Chinese, English, Japanese and Korean.',
+        'Meet the Mori Pilates team — Claire, Tidus and Ivy. STOTT and Polestar certified, combining machine Pilates, functional training and Japanese Seitai. Lessons available in Chinese, English, Japanese and Korean.',
     },
     journal: {
       title: 'News | Studio Updates & Pilates Knowledge',
@@ -246,7 +246,7 @@ const dict: Dict = {
     kicker: 'Instructors',
     title: 'Our Instructors',
     intro:
-      'Mori’s teachers arrived here through very different bodies — recovering from spinal disease, dance, street workout, years at a desk in tech. What they share: they see the person first, then the movement.',
+      'Mori’s teachers arrived here through very different bodies — recovering from spinal disease, street workout, years at a desk in tech. What they share: they see the person first, then the movement.',
     certsLabel: 'Certifications',
     languagesLabel: 'Teaching languages',
     list: [

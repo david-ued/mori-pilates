@@ -4,9 +4,17 @@ import { PlaceholderImage } from '@/components/PlaceholderImage';
 import { FadeUp, Stagger, StaggerItem } from '@/components/motion/Reveal';
 import { LineButton } from '@/components/LineButton';
 
+/** Instructors without a photo here are hidden until one is provided. */
+const INSTRUCTOR_PHOTOS: Record<string, string> = {
+  Claire: '/images/photos/instructor-claire.jpg',
+  Tidus: '/images/photos/instructor-tidus.jpg',
+  Ivy: '/images/photos/instructor-ivy.jpg',
+};
+
 export function InstructorsPage({ locale }: { locale: Locale }) {
   const dict = getDict(locale);
   const t = dict.instructors;
+  const visible = t.list.filter((person) => INSTRUCTOR_PHOTOS[person.name]);
 
   return (
     <>
@@ -26,16 +34,15 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
 
       <section aria-label={t.title} className="pb-24 md:pb-32">
         <div className="mx-auto max-w-6xl px-6 md:px-8">
-          <Stagger className="grid gap-x-10 gap-y-16 md:grid-cols-2">
-            {t.list.map((person, i) => (
+          <Stagger className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+            {visible.map((person) => (
               <StaggerItem key={person.name} as="article" className="flex flex-col">
                 <div className="relative overflow-hidden">
                   <PlaceholderImage
-                    src={`/images/placeholders/instructor-${i + 1}.svg`}
+                    src={INSTRUCTOR_PHOTOS[person.name]}
                     alt={`${person.name} — ${person.title}`}
-                    label={dict.common.imagePlaceholder}
-                    className="aspect-[4/3]"
-                    sizes="(min-width: 768px) 45vw, 100vw"
+                    className="aspect-[3/4]"
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
                   />
                   {/* oversized name, IG-poster style */}
                   <span

@@ -18,9 +18,9 @@ const dict: Dict = {
         '私人 1:1、雙人 1:2、三人 1:3 器械皮拉提斯課程,以及 20-60 分鐘日式整體。體驗課程與課卡方案一覽,LINE 線上預約。',
     },
     instructors: {
-      title: '師資介紹|Claire・Tidus・Ivy・Aaron',
+      title: '師資介紹|Claire・Tidus・Ivy',
       description:
-        'Mori Pilates 師資團隊 — Claire、Tidus、Ivy、Aaron。擁有 STOTT、Polestar 國際認證,結合器械皮拉提斯、功能性訓練與日式整體,支援中英日韓語授課。',
+        'Mori Pilates 師資團隊 — Claire、Tidus、Ivy。擁有 STOTT、Polestar 國際認證,結合器械皮拉提斯、功能性訓練與日式整體,支援中英日韓語授課。',
     },
     journal: {
       title: '最新消息|教室公告與皮拉提斯知識',
@@ -241,7 +241,7 @@ const dict: Dict = {
     kicker: 'Instructors',
     title: '師資介紹',
     intro:
-      'Mori 的老師來自不同的身體經驗——脊椎疾病的自我修復、舞蹈、街頭健身、科技業的久坐日常。共同點是:先看見「人」,再看見動作。',
+      'Mori 的老師來自不同的身體經驗——脊椎疾病的自我修復、街頭健身、科技業的久坐日常。共同點是:先看見「人」,再看見動作。',
     certsLabel: '證照與認證',
     languagesLabel: '授課語言',
     list: [
