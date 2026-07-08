@@ -73,6 +73,9 @@ const dict: Dict = {
     proofBody:
       '猫背の改善、肩こりの解放、そしてご年配の方が再びしゃがめるように、しっかり歩けるように——私たちが大切にするのは機能の回復。心地よく生活できる身体へ。',
     beforeAfterNote: 'ビフォー/アフターの記録写真は準備中です。順次公開いたします。',
+    instructorKicker: 'Meet Your Teacher',
+    instructorTitle: 'あなたを導く、Claire',
+    instructorCta: 'インストラクター紹介へ',
     finalCtaTitle: '身体に、静まる時間を',
     finalCtaBody: '初回の体験レッスンでは、まずあなたのお話を聞くことから。それから、ゆっくり身体を動かしはじめます。',
   },

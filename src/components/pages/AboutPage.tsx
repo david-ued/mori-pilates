@@ -124,12 +124,15 @@ export function AboutPage({ locale }: { locale: Locale }) {
           </FadeUp>
 
           <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
-            {['studio-1', 'studio-2', 'studio-3'].map((name, i) => (
-              <StaggerItem key={name}>
+            {[
+              { src: '/images/photos/space-reformers.jpg', alt: 'Row of reformers at Mori Pilates' },
+              { src: '/images/photos/space-shelf.jpg', alt: '“your Mori” shelf with pilates props' },
+              { src: '/images/photos/space-cadillac.jpg', alt: 'Cadillac by the window at Mori Pilates' },
+            ].map((p) => (
+              <StaggerItem key={p.src}>
                 <PlaceholderImage
-                  src={`/images/placeholders/${name}.svg`}
-                  alt={`Mori Pilates studio environment ${i + 1}`}
-                  label={dict.common.imagePlaceholder}
+                  src={p.src}
+                  alt={p.alt}
                   className="aspect-[4/5]"
                   sizes="(min-width: 768px) 30vw, 100vw"
                 />

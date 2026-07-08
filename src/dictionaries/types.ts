@@ -59,6 +59,9 @@ export interface Dict {
     proofTitle: string;
     proofBody: string;
     beforeAfterNote: string;
+    instructorKicker: string;
+    instructorTitle: string;
+    instructorCta: string;
     finalCtaTitle: string;
     finalCtaBody: string;
   };

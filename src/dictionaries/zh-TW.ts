@@ -73,6 +73,9 @@ const dict: Dict = {
     proofBody:
       '從駝背改善、肩頸鬆開,到長輩重新蹲得下去、走得更穩——我們重視的是功能性的恢復:讓身體回到能好好生活的狀態。',
     beforeAfterNote: '學員體態紀錄照(Before / After)整理中,將陸續更新。',
+    instructorKicker: 'Meet Your Teacher',
+    instructorTitle: '帶領你的老師,Claire',
+    instructorCta: '認識所有老師',
     finalCtaTitle: '給身體一次靜下來的機會',
     finalCtaBody: '第一堂體驗課,讓我們先聽你說,再讓身體慢慢開始。',
   },

@@ -23,8 +23,12 @@ export function PlaceholderImage({
   priority?: boolean;
   sizes?: string;
 }) {
+  // callers may position the wrapper themselves (e.g. `absolute inset-0` for the hero);
+  // only default to `relative` when no position class is passed, since `.relative`
+  // comes after `.absolute` in the compiled CSS and would override it
+  const hasPosition = /\b(absolute|fixed)\b/.test(className);
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`${hasPosition ? '' : 'relative'} overflow-hidden ${className}`}>
       <Image
         src={src}
         alt={alt}

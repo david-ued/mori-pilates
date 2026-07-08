@@ -74,6 +74,9 @@ const dict: Dict = {
     proofBody:
       'From improved posture and released shoulders to seniors squatting and walking with confidence again — we care about functional recovery: returning the body to a state where life feels good to live.',
     beforeAfterNote: 'Client before/after records are being prepared and will be added soon.',
+    instructorKicker: 'Meet Your Teacher',
+    instructorTitle: 'Your teacher, Claire',
+    instructorCta: 'Meet all our teachers',
     finalCtaTitle: 'Give your body a moment of stillness',
     finalCtaBody:
       'In your first trial session, we listen first — then let the body begin, gently.',
