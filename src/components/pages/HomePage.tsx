@@ -146,42 +146,6 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* ---------- Proof ---------- */}
-      <section aria-labelledby="home-proof" className="py-24 md:py-36">
-        <div className="mx-auto max-w-6xl px-6 md:px-8">
-          <FadeUp>
-            <p className="text-xs font-medium uppercase tracking-[0.34em] text-mori">{t.proofKicker}</p>
-          </FadeUp>
-          <FadeUp delay={0.08}>
-            <h2 id="home-proof" className="text-balance-cjk mt-5 font-heading text-2xl leading-snug text-ink md:text-3xl">
-              {t.proofTitle}
-            </h2>
-          </FadeUp>
-          <FadeUp delay={0.16}>
-            <p className="mt-6 max-w-2xl leading-8 text-ink-soft">{t.proofBody}</p>
-          </FadeUp>
-
-          <div className="mt-14 max-w-4xl">
-            <Parallax amount={50}>
-              <FadeUp>
-                <figure>
-                  <PlaceholderImage
-                    src="/images/placeholders/before-after.svg"
-                    alt="Before and after — functional recovery results"
-                    label={dict.common.imagePlaceholder}
-                    className="aspect-[14/9] shadow-[0_30px_60px_-38px_rgba(36,33,33,0.5)]"
-                    sizes="(min-width: 1024px) 55vw, 100vw"
-                  />
-                  <figcaption className="mt-3 text-xs tracking-wide text-ink-soft/80">
-                    {t.beforeAfterNote}
-                  </figcaption>
-                </figure>
-              </FadeUp>
-            </Parallax>
-          </div>
-        </div>
-      </section>
-
       {/* ---------- Meet Claire ---------- */}
       <section aria-labelledby="home-instructor" className="bg-mori-mist/50 py-24 md:py-36">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-8">

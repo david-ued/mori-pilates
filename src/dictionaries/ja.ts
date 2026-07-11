@@ -68,11 +68,6 @@ const dict: Dict = {
       },
     ],
     servicesCta: 'レッスン・料金を見る',
-    proofKicker: 'Real Changes',
-    proofTitle: '身体の変化は、目に見える',
-    proofBody:
-      '猫背の改善、肩こりの解放、そしてご年配の方が再びしゃがめるように、しっかり歩けるように——私たちが大切にするのは機能の回復。心地よく生活できる身体へ。',
-    beforeAfterNote: 'ビフォー/アフターの記録写真は準備中です。順次公開いたします。',
     instructorKicker: 'Meet Your Teacher',
     instructorTitle: 'あなたを導く、Claire',
     instructorCta: 'インストラクター紹介へ',
@@ -205,6 +200,16 @@ const dict: Dict = {
         '日本由来の手技療法で、骨格の配列と筋膜の緊張をやさしく整えます。単独でも、ピラティスとの組み合わせならさらに効果的です。',
       plans: [
         {
+          name: '下半身 20分',
+          subtitle: 'Lower Body 20 min',
+          description: '骨盤・股関節・脚のクイック調整。レッスン前やデスクワークの方に。',
+          tiers: [
+            { label: '1回', price: 'NT$600' },
+            { label: '8回', price: 'NT$4,600', note: '1回あたり NT$575' },
+            { label: '16回', price: 'NT$8,800', note: '1回あたり NT$550', highlight: true },
+          ],
+        },
+        {
           name: '整体 40分',
           subtitle: 'Seitai 40 min',
           description: '全身の調整。初めての方や定期的なメンテナンスに。',
@@ -222,16 +227,6 @@ const dict: Dict = {
             { label: '1回', price: 'NT$1,300' },
             { label: '8回', price: 'NT$10,200', note: '1回あたり NT$1,275' },
             { label: '16回', price: 'NT$20,000', note: '1回あたり NT$1,250', highlight: true },
-          ],
-        },
-        {
-          name: '下半身 20分',
-          subtitle: 'Lower Body 20 min',
-          description: '骨盤・股関節・脚のクイック調整。レッスン前やデスクワークの方に。',
-          tiers: [
-            { label: '1回', price: 'NT$600' },
-            { label: '8回', price: 'NT$4,600', note: '1回あたり NT$575' },
-            { label: '16回', price: 'NT$8,800', note: '1回あたり NT$550', highlight: true },
           ],
         },
       ],

@@ -5,16 +5,14 @@ import { LineButton } from '@/components/LineButton';
 import { PlaceholderImage } from '@/components/PlaceholderImage';
 import { FadeUp, Stagger, StaggerItem } from '@/components/motion/Reveal';
 
-/** Course intro + pricing integrated in one card, with a placeholder photo on top. */
+/** Course intro + pricing integrated in one card, with a brand graphic on top. */
 function PlanCard({
   plan,
   imageSrc,
-  imageLabel,
   cta,
 }: {
   plan: ClassPlan;
   imageSrc: string;
-  imageLabel: string;
   cta: string;
 }) {
   return (
@@ -25,7 +23,6 @@ function PlanCard({
       <PlaceholderImage
         src={imageSrc}
         alt={plan.name}
-        label={imageLabel}
         className="aspect-[16/10]"
         sizes="(min-width: 1024px) 30vw, 100vw"
       />
@@ -105,8 +102,8 @@ export function ClassesPage({ locale }: { locale: Locale }) {
             </div>
             <FadeUp delay={0.15}>
               <PlaceholderImage
-                src="/images/photos/reformer.jpg"
-                alt="Machine Pilates session at Mori"
+                src="/images/graphics/pilates-header.svg"
+                alt="From a seedling to a forest — Pilates at Mori"
                 className="aspect-[4/3] md:aspect-[16/9]"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
@@ -114,12 +111,11 @@ export function ClassesPage({ locale }: { locale: Locale }) {
           </div>
 
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
-            {t.pilates.plans.map((plan) => (
+            {t.pilates.plans.map((plan, i) => (
               <PlanCard
                 key={plan.name}
                 plan={plan}
-                imageSrc="/images/placeholders/pilates.svg"
-                imageLabel={dict.common.imagePlaceholder}
+                imageSrc={`/images/graphics/pilates-${i + 1}.svg`}
                 cta={t.bookCta}
               />
             ))}
@@ -145,9 +141,8 @@ export function ClassesPage({ locale }: { locale: Locale }) {
             </div>
             <FadeUp delay={0.15}>
               <PlaceholderImage
-                src="/images/placeholders/seitai.svg"
-                alt="Japanese Seitai bodywork at Mori"
-                label={dict.common.imagePlaceholder}
+                src="/images/graphics/seitai-header.svg"
+                alt="From a bamboo to a bamboo grove — Japanese Seitai at Mori"
                 className="aspect-[4/3] md:aspect-[16/9]"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
@@ -155,12 +150,11 @@ export function ClassesPage({ locale }: { locale: Locale }) {
           </div>
 
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
-            {t.seitai.plans.map((plan) => (
+            {t.seitai.plans.map((plan, i) => (
               <PlanCard
                 key={plan.name}
                 plan={plan}
-                imageSrc="/images/placeholders/seitai.svg"
-                imageLabel={dict.common.imagePlaceholder}
+                imageSrc={`/images/graphics/seitai-${i + 1}.svg`}
                 cta={t.bookCta}
               />
             ))}

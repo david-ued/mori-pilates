@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="From a bamboo to a bamboo grove">
+  <rect width="800" height="450" fill="#E6EBE0"/>
+  <defs>
+    <g id="culm" fill="#57805C">
+      <rect x="-12" y="76" width="24" height="67" rx="11"/>
+      <rect x="-12" y="146" width="24" height="67" rx="11"/>
+      <rect x="-12" y="216" width="24" height="67" rx="11"/>
+      <rect x="-12" y="286" width="24" height="67" rx="11"/>
+    </g>
+    <g id="leaves" fill="#57805C">
+      <path d="M0 0 C 28 -11 58 -11 82 -2 C 56 11 28 9 0 0 Z"/>
+      <path d="M0 0 C 16 -24 42 -40 70 -42 C 55 -18 31 -4 0 0 Z"/>
+      <path d="M0 0 C 24 5 46 20 57 40 C 31 35 11 20 0 0 Z" opacity="0.7"/>
+    </g>
+  </defs>
+  <use href="#culm" x="120" opacity="0.75"/>
+  <use href="#culm" x="235" opacity="0.35" transform="translate(0,24)"/>
+  <use href="#culm" x="345"/>
+  <use href="#culm" x="455" opacity="0.55" transform="translate(0,16)"/>
+  <use href="#culm" x="560"/>
+  <use href="#culm" x="668" opacity="0.35" transform="translate(0,26)"/>
+  <path d="M132 152 C 146 143 159 134 172 127" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+  <use href="#leaves" x="172" y="127" opacity="0.75"/>
+  <path d="M357 222 C 370 214 382 206 394 200" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round"/>
+  <use href="#leaves" x="394" y="200"/>
+  <path d="M572 150 C 585 142 597 134 609 128" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round"/>
+  <use href="#leaves" x="609" y="128"/>
+</svg>

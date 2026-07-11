@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Forest — trio 1:3">
+  <rect width="800" height="500" fill="#E6EBE0"/>
+  <!-- back row -->
+  <g fill="#57805C" opacity="0.35">
+    <path d="M186 210 L152 268 H220 Z"/>
+    <path d="M186 244 L142 318 H230 Z"/>
+    <path d="M310 178 L272 244 H348 Z"/>
+    <path d="M310 216 L262 298 H358 Z"/>
+    <path d="M478 190 L442 252 H514 Z"/>
+    <path d="M478 226 L432 304 H524 Z"/>
+    <path d="M614 214 L580 272 H648 Z"/>
+    <path d="M614 248 L570 322 H658 Z"/>
+  </g>
+  <!-- front row -->
+  <g fill="#57805C">
+    <path d="M248 176 L206 254 H290 Z"/>
+    <path d="M248 224 L194 320 H302 Z"/>
+    <path d="M248 278 L182 384 H314 Z"/>
+    <rect x="240" y="384" width="16" height="26" rx="3"/>
+    <path d="M400 130 L354 216 H446 Z"/>
+    <path d="M400 182 L340 288 H460 Z"/>
+    <path d="M400 242 L326 372 H474 Z"/>
+    <rect x="391" y="372" width="18" height="34" rx="3"/>
+    <path d="M552 176 L510 254 H594 Z"/>
+    <path d="M552 224 L498 320 H606 Z"/>
+    <path d="M552 278 L486 384 H618 Z"/>
+    <rect x="544" y="384" width="16" height="26" rx="3"/>
+  </g>
+  <!-- ground -->
+  <path d="M140 412 H 660" stroke="#57805C" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="A few bamboo — seitai 40 min">
+  <rect width="800" height="500" fill="#E6EBE0"/>
+  <defs>
+    <g id="culm" fill="#57805C">
+      <rect x="-13" y="96" width="26" height="73" rx="12"/>
+      <rect x="-13" y="172" width="26" height="73" rx="12"/>
+      <rect x="-13" y="248" width="26" height="73" rx="12"/>
+      <rect x="-13" y="324" width="26" height="73" rx="12"/>
+    </g>
+    <g id="leaves" fill="#57805C">
+      <path d="M0 0 C 30 -12 64 -12 90 -2 C 62 12 30 10 0 0 Z"/>
+      <path d="M0 0 C 18 -26 46 -44 76 -46 C 60 -20 34 -4 0 0 Z"/>
+      <path d="M0 0 C 26 6 50 22 62 44 C 34 38 12 22 0 0 Z" opacity="0.7"/>
+    </g>
+  </defs>
+  <use href="#culm" x="310"/>
+  <use href="#culm" x="410" opacity="0.7" transform="translate(0,14)"/>
+  <use href="#culm" x="505" opacity="0.45" transform="translate(0,26)"/>
+  <path d="M323 176 C 338 166 352 156 366 148" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round"/>
+  <use href="#leaves" x="366" y="148"/>
+  <path d="M423 268 C 436 260 448 252 460 246" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <use href="#leaves" x="460" y="246" opacity="0.7"/>
+</svg>

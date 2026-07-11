@@ -68,11 +68,6 @@ const dict: Dict = {
       },
     ],
     servicesCta: '查看課程與價目',
-    proofKicker: 'Real Changes',
-    proofTitle: '身體的改變,看得見',
-    proofBody:
-      '從駝背改善、肩頸鬆開,到長輩重新蹲得下去、走得更穩——我們重視的是功能性的恢復:讓身體回到能好好生活的狀態。',
-    beforeAfterNote: '學員體態紀錄照(Before / After)整理中,將陸續更新。',
     instructorKicker: 'Meet Your Teacher',
     instructorTitle: '帶領你的老師,Claire',
     instructorCta: '認識所有老師',
@@ -205,6 +200,16 @@ const dict: Dict = {
         '源自日本的徒手整復手技,溫和調整骨架排列與筋膜張力。可單獨進行,與皮拉提斯搭配效果更佳。',
       plans: [
         {
+          name: '下半身 20 分鐘',
+          subtitle: 'Lower Body 20 min',
+          description: '針對骨盆、髖、腿部的快速調整,適合課前放鬆或久坐族。',
+          tiers: [
+            { label: '單次', price: 'NT$600' },
+            { label: '8 次', price: 'NT$4,600', note: '每次 NT$575' },
+            { label: '16 次', price: 'NT$8,800', note: '每次 NT$550', highlight: true },
+          ],
+        },
+        {
           name: '整體 40 分鐘',
           subtitle: 'Seitai 40 min',
           description: '全身性的調整,適合初次體驗與定期保養。',
@@ -222,16 +227,6 @@ const dict: Dict = {
             { label: '單次', price: 'NT$1,300' },
             { label: '8 次', price: 'NT$10,200', note: '每次 NT$1,275' },
             { label: '16 次', price: 'NT$20,000', note: '每次 NT$1,250', highlight: true },
-          ],
-        },
-        {
-          name: '下半身 20 分鐘',
-          subtitle: 'Lower Body 20 min',
-          description: '針對骨盆、髖、腿部的快速調整,適合課前放鬆或久坐族。',
-          tiers: [
-            { label: '單次', price: 'NT$600' },
-            { label: '8 次', price: 'NT$4,600', note: '每次 NT$575' },
-            { label: '16 次', price: 'NT$8,800', note: '每次 NT$550', highlight: true },
           ],
         },
       ],

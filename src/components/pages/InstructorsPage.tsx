@@ -34,9 +34,15 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
 
       <section aria-label={t.title} className="pb-24 md:pb-32">
         <div className="mx-auto max-w-6xl px-6 md:px-8">
-          <Stagger className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+          {/* each card spans 5 subgrid rows (photo/name/tags/bio/certs) so the cert boxes
+              start on the same line and stretch to equal height across a row */}
+          <Stagger className="grid gap-x-8 md:grid-cols-2 lg:grid-cols-3">
             {visible.map((person) => (
-              <StaggerItem key={person.name} as="article" className="flex flex-col">
+              <StaggerItem
+                key={person.name}
+                as="article"
+                className="grid grid-rows-subgrid row-span-5 pb-16"
+              >
                 <div className="relative overflow-hidden">
                   <PlaceholderImage
                     src={INSTRUCTOR_PHOTOS[person.name]}
@@ -73,11 +79,11 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
 
                 <p className="mt-4 text-sm leading-7 text-ink-soft">{person.bio}</p>
 
-                <div className="mt-5 rounded-xl border border-mori/15 bg-cream-dim/50 p-5">
+                <div className="mt-5 flex flex-col rounded-xl border border-mori/15 bg-cream-dim/50 p-5">
                   <h3 className="text-[10px] font-medium uppercase tracking-[0.28em] text-ink-soft/70">
                     {t.certsLabel}
                   </h3>
-                  <ul className="mt-3 space-y-1.5">
+                  <ul className="mt-3 space-y-1.5 pb-4">
                     {person.certifications.map((c) => (
                       <li key={c} className="flex gap-2.5 text-[13px] leading-6 text-ink-soft">
                         <span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-mori" />
@@ -86,7 +92,7 @@ export function InstructorsPage({ locale }: { locale: Locale }) {
                     ))}
                   </ul>
                   {person.languages ? (
-                    <p className="mt-4 border-t border-mori/10 pt-3 text-[13px] text-mori-deep">
+                    <p className="mt-auto border-t border-mori/10 pt-3 text-[13px] text-mori-deep">
                       <span className="mr-2 text-[10px] font-medium uppercase tracking-[0.28em] text-ink-soft/70">
                         {t.languagesLabel}
                       </span>

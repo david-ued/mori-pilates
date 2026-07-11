@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="A single bamboo — lower body 20 min">
+  <rect width="800" height="500" fill="#E6EBE0"/>
+  <defs>
+    <g id="culm" fill="#57805C">
+      <rect x="-13" y="96" width="26" height="73" rx="12"/>
+      <rect x="-13" y="172" width="26" height="73" rx="12"/>
+      <rect x="-13" y="248" width="26" height="73" rx="12"/>
+      <rect x="-13" y="324" width="26" height="73" rx="12"/>
+    </g>
+    <g id="leaves" fill="#57805C">
+      <path d="M0 0 C 30 -12 64 -12 90 -2 C 62 12 30 10 0 0 Z"/>
+      <path d="M0 0 C 18 -26 46 -44 76 -46 C 60 -20 34 -4 0 0 Z"/>
+      <path d="M0 0 C 26 6 50 22 62 44 C 34 38 12 22 0 0 Z" opacity="0.7"/>
+    </g>
+  </defs>
+  <use href="#culm" x="400"/>
+  <path d="M413 176 C 428 166 442 156 456 148" fill="none" stroke="#57805C" stroke-width="5" stroke-linecap="round"/>
+  <use href="#leaves" x="456" y="148"/>
+</svg>

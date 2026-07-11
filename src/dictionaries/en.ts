@@ -69,11 +69,6 @@ const dict: Dict = {
       },
     ],
     servicesCta: 'View classes & pricing',
-    proofKicker: 'Real Changes',
-    proofTitle: 'Change you can see — and feel',
-    proofBody:
-      'From improved posture and released shoulders to seniors squatting and walking with confidence again — we care about functional recovery: returning the body to a state where life feels good to live.',
-    beforeAfterNote: 'Client before/after records are being prepared and will be added soon.',
     instructorKicker: 'Meet Your Teacher',
     instructorTitle: 'Your teacher, Claire',
     instructorCta: 'Meet all our teachers',
@@ -209,6 +204,16 @@ const dict: Dict = {
         'Gentle manual therapy from Japan that realigns the skeletal frame and releases fascial tension. Effective on its own — even better paired with Pilates.',
       plans: [
         {
+          name: 'Lower body · 20 min',
+          subtitle: 'Pelvis · hips · legs',
+          description: 'A quick reset for the pelvis, hips and legs — great before class or for desk workers.',
+          tiers: [
+            { label: 'Single', price: 'NT$600' },
+            { label: '8 sessions', price: 'NT$4,600', note: 'NT$575 / session' },
+            { label: '16 sessions', price: 'NT$8,800', note: 'NT$550 / session', highlight: true },
+          ],
+        },
+        {
           name: 'Seitai · 40 min',
           subtitle: 'Full body',
           description: 'A full-body tune-up — ideal for first visits and regular maintenance.',
@@ -226,16 +231,6 @@ const dict: Dict = {
             { label: 'Single', price: 'NT$1,300' },
             { label: '8 sessions', price: 'NT$10,200', note: 'NT$1,275 / session' },
             { label: '16 sessions', price: 'NT$20,000', note: 'NT$1,250 / session', highlight: true },
-          ],
-        },
-        {
-          name: 'Lower body · 20 min',
-          subtitle: 'Pelvis · hips · legs',
-          description: 'A quick reset for the pelvis, hips and legs — great before class or for desk workers.',
-          tiers: [
-            { label: 'Single', price: 'NT$600' },
-            { label: '8 sessions', price: 'NT$4,600', note: 'NT$575 / session' },
-            { label: '16 sessions', price: 'NT$8,800', note: 'NT$550 / session', highlight: true },
           ],
         },
       ],

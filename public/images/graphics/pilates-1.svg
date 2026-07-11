@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Seedling — private 1:1">
+  <rect width="800" height="500" fill="#E6EBE0"/>
+  <!-- stem -->
+  <path d="M400 384 C 400 350 400 310 400 268" fill="none" stroke="#57805C" stroke-width="10" stroke-linecap="round"/>
+  <!-- left leaf -->
+  <path d="M398 270 C 350 272 312 240 306 188 C 356 190 394 222 398 270 Z" fill="#57805C"/>
+  <!-- right leaf -->
+  <path d="M402 270 C 450 272 488 240 494 188 C 444 190 406 222 402 270 Z" fill="#57805C" opacity="0.6"/>
+  <!-- ground -->
+  <path d="M252 384 H 548" stroke="#57805C" stroke-width="6" stroke-linecap="round"/>
+</svg>

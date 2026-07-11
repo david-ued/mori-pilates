@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="From seedling to forest">
+  <rect width="800" height="450" fill="#E6EBE0"/>
+  <!-- seedling -->
+  <g>
+    <path d="M170 356 C 170 334 170 314 170 288" fill="none" stroke="#57805C" stroke-width="7" stroke-linecap="round"/>
+    <path d="M169 290 C 140 291 116 271 112 239 C 143 240 166 260 169 290 Z" fill="#57805C"/>
+    <path d="M171 290 C 200 291 224 271 228 239 C 197 240 174 260 171 290 Z" fill="#57805C" opacity="0.6"/>
+  </g>
+  <!-- young tree -->
+  <g fill="#57805C" opacity="0.85">
+    <path d="M360 214 L328 272 H392 Z"/>
+    <path d="M360 250 L318 322 H402 Z"/>
+    <rect x="354" y="322" width="12" height="34" rx="3"/>
+  </g>
+  <!-- grown tree -->
+  <g fill="#57805C">
+    <path d="M540 132 L500 208 H580 Z"/>
+    <path d="M540 178 L488 272 H592 Z"/>
+    <path d="M540 232 L474 340 H606 Z"/>
+    <rect x="532" y="340" width="16" height="30" rx="3"/>
+  </g>
+  <!-- forest hint -->
+  <g fill="#57805C" opacity="0.4">
+    <path d="M676 220 L646 274 H706 Z"/>
+    <path d="M676 254 L636 324 H716 Z"/>
+    <path d="M742 250 L718 294 H766 Z"/>
+    <path d="M742 278 L710 334 H774 Z"/>
+  </g>
+  <!-- ground -->
+  <path d="M96 372 H 720" stroke="#57805C" stroke-width="6" stroke-linecap="round"/>
+</svg>

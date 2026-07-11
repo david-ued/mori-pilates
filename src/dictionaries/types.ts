@@ -55,10 +55,6 @@ export interface Dict {
     servicesBody: string;
     services: { title: string; body: string }[];
     servicesCta: string;
-    proofKicker: string;
-    proofTitle: string;
-    proofBody: string;
-    beforeAfterNote: string;
     instructorKicker: string;
     instructorTitle: string;
     instructorCta: string;

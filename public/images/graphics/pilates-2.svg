@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Two trees — duet 1:2">
+  <rect width="800" height="500" fill="#E6EBE0"/>
+  <!-- tall tree -->
+  <g fill="#57805C">
+    <path d="M330 112 L284 200 H376 Z"/>
+    <path d="M330 164 L270 268 H390 Z"/>
+    <path d="M330 224 L254 344 H406 Z"/>
+    <rect x="321" y="344" width="18" height="42" rx="3"/>
+  </g>
+  <!-- second tree -->
+  <g fill="#57805C" opacity="0.6">
+    <path d="M492 208 L458 268 H526 Z"/>
+    <path d="M492 246 L447 320 H537 Z"/>
+    <path d="M492 288 L436 368 H548 Z"/>
+    <rect x="485" y="368" width="14" height="30" rx="3"/>
+  </g>
+  <!-- ground -->
+  <path d="M216 386 H 584" stroke="#57805C" stroke-width="6" stroke-linecap="round"/>
+</svg>
